@@ -1,0 +1,298 @@
+:root {
+  --primary: #227093;
+  --secondary: #ff5252;
+  --background: #eee;
+  --highlight: #ffda79;
+  /* Theme color */
+  --theme: var(--primary);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Ensure scrollbars are visible on all pages */
+html {
+  overflow-y: scroll;
+  scrollbar-width: auto;
+  -ms-overflow-style: scrollbar;
+}
+
+html::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+body {
+  overflow-y: auto;
+}
+
+*,
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif !important;
+}
+
+.section-container {
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+.text-12-16 {
+  font-size: 12px;
+}
+.text-14-18 {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .text-12-16 {
+    font-size: 13px;
+  }
+  .text-14-18 {
+    font-size: 15px;
+  }
+
+  .section-container {
+    padding-top: 7rem; /* pt-28 */
+    padding-bottom: 5rem; /* pb-20 */
+  }
+}
+@media (min-width: 1024px) {
+  .text-12-16 {
+    font-size: 14px;
+  }
+  .text-14-18 {
+    font-size: 16px;
+  }
+
+  .section-container {
+    padding-top: 9rem; /* pt-36 */
+    padding-bottom: 6rem; /* pb-24 */
+  }
+}
+@media (min-width: 1280px) {
+  .text-12-16 {
+    font-size: 16px;
+  }
+  .text-14-18 {
+    font-size: 18px;
+  }
+  .section-container {
+    padding-top: 10rem; /* pt-40 */
+    padding-bottom: 7rem; /* mb-28 */
+  }
+}
+
+/* Mobile Navigation Slide Animation */
+#mobileNav {
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  #mobileNav {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  #mobileNav.menu-open {
+    opacity: 1;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #193759;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #mobileNav {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #193759 !important;
+    width: 22px !important;
+    height: 22px !important;
+  }
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .swiper-property .swiper-slide {
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    transform: scale(0.8);
+    background-color: #91a4b6;
+  }
+
+  .swiper-property .swiper-slide-active {
+    transform: scale(1);
+    background-color: #eaf0f6 !important;
+  }
+}
+@media (max-width: 768px) {
+  .swiper-property .swiper-slide {
+    transition: transform 0.5s ease;
+    transform: scale(0.8);
+  }
+
+  .swiper-property .swiper-slide-active {
+    transform: scale(1);
+  }
+}
+
+/* Research slider: ensure slide flows on pagination click (mobile only) */
+@media (max-width: 767px) {
+  .swiper-research .swiper-wrapper {
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+  }
+}
+
+/* Research slider pagination: single track + one moving dot (like image, smartphone only) */
+.swiper-research-pagination {
+  padding: 0 8px;
+}
+.swiper-research-pagination .research-pagination-track {
+  position: relative;
+  width: 100%;
+  max-width: 120px;
+  height: 10px;
+  background: #d9dee3;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+.swiper-research-pagination .research-pagination-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: #373b60;
+  border-radius: 50%;
+  transition: left 0.5s ease-out;
+  pointer-events: none;
+}
+
+.swiper-feedback .swiper-slide {
+  transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+  transform: scale(0.92);
+  background-color: #EEF3F7;
+}
+.swiper-feedback .swiper-slide-active {
+  transform: scale(1);
+  background-color: #FCFDFD !important;
+}
+
+#reviews .swiper-slide {
+  background-color: #eaf3ef;
+}
+#reviews .swiper-slide-active {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Our Cases slider: for PC: active scale 1, others scale 0.7 */
+@media (min-width: 768px) {
+  .swiper-our-cases .swiper-wrapper {
+    align-items: stretch;
+  }
+  .swiper-our-cases .swiper-slide {
+    transition: transform 0.5s ease;
+    transform: scale(0.7);
+  }
+  .swiper-our-cases .swiper-slide-active {
+    transform: scale(1);
+  }
+}
+
+/* Our Cases: 2 flex panels, hover/active increases one panel; dots switch active */
+.cases-panels-row {
+  align-items: stretch;
+}
+@media (min-width: 768px) {
+  .cases-panel {
+    flex: 1 1 0%;
+    transition: flex 0.5s ease;
+    min-width: 0;
+  }
+  .cases-panel:hover,
+  .cases-panel.active {
+    flex: 1.5 1 0%;
+  }
+}
+.cases-dot {
+  transition: width 0.25s ease, height 0.25s ease, background-color 0.25s ease;
+}
+.cases-dot:not(.cases-dot-active) {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #C8D2D0;
+}
+.cases-dot.cases-dot-active {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #125941;
+}
+
+.swiper-investment-steps .swiper-wrapper {
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .swiper-investment-steps .swiper-slide {
+    transition: transform 0.5s ease;
+    transform: scale(0.8);
+  }
+}
+
+.swiper-investment-steps .swiper-slide-active {
+  transform: scale(1);
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .writing-vertical {
+    writing-mode: horizontal-tb;
+  }
+
+  .swiper-feedback .swiper-slide {
+    transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+    transform: scale(0.8);
+  }
+  .swiper-feedback .swiper-slide-active {
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0.7) !important;
+  }
+}
