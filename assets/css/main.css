@@ -44,11 +44,15 @@ body {
 
 *,
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Zen Old Mincho", serif;
 }
 
 .font-inter {
   font-family: "Inter", sans-serif !important;
+}
+
+.font-bodoni {
+  font-family: "Bodoni Moda", serif !important;
 }
 
 .section-container {
@@ -84,7 +88,7 @@ body {
   }
 
   .section-container {
-    padding-top: 9rem; /* pt-36 */
+    padding-top: 8rem; /* pt-36 */
     padding-bottom: 6rem; /* pb-24 */
   }
 }
@@ -94,10 +98,6 @@ body {
   }
   .text-14-18 {
     font-size: 18px;
-  }
-  .section-container {
-    padding-top: 10rem; /* pt-40 */
-    padding-bottom: 7rem; /* mb-28 */
   }
 }
 
@@ -198,6 +198,11 @@ body {
   background-color: #373b60;
   border-radius: 50%;
   transition: left 0.5s ease-out;
+  pointer-events: none;
+}
+
+/* Let clicks pass through to the ripple canvas on the FV slides */
+.fv-top-ripples .slide-inner {
   pointer-events: none;
 }
 
