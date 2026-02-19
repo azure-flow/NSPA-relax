@@ -101,9 +101,111 @@ body {
   }
 }
 
+// Color
+
+.green-gradient {
+  background: linear-gradient(90deg, #3f9f6f 0%, #3f9f6f 100%);
+}
+
+.blue-gradient {
+  background: linear-gradient(90deg, #73b1e1 0%, #008fd2 60%, #0079c1 100%);
+}
+
+.green-gradient-text {
+  color: #3f9f6f;
+}
+.blue-gradient-text {
+  background: linear-gradient(90deg, #73b1e1 0%, #008fd2 60%, #0079c1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: red;
+  /* The following makes the gradient work for text only */
+  display: inline-block;
+}
+
+// Accordion - Faq
+
+
+.tab {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+
+.tab input:checked ~ .tab__content {
+  max-height: 10rem;
+}
+
+/* Visual styles */
+.accordion {
+  overflow: hidden;
+}
+
+.tab__label,
+.tab__close {
+  display: flex;
+  color: black;
+  background: #fff;
+  cursor: pointer;
+}
+
+.tab__label {
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+@media (max-width: 767px) {
+  .tab__label {
+    padding: 8px 16px;
+  }
+}
+
+.tab input:checked + .tab__label .fa-caret-down {
+  display: none;
+}
+
+/* Accordion + / - indicators: "-" when expanded, "+" when collapsed */
+.tab input:checked + .tab__label .expanded-indicator {
+  display: inline;
+}
+.tab input:checked + .tab__label .collapsed-indicator {
+  display: none;
+}
+.tab input:not(:checked) + .tab__label .expanded-indicator {
+  display: none;
+}
+.tab input:not(:checked) + .tab__label .collapsed-indicator {
+  display: inline;
+}
+
+.tab__content p {
+  margin: 0;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+/* Arrow animation */
+.tab input:not(:checked) + .tab__label:hover::after {
+  animation: bounce 0.5s infinite;
+}
+
 /* Mobile Navigation Slide Animation */
 #mobileNav {
-  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    max-height 0.4s ease-in-out,
+    opacity 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -146,7 +248,9 @@ body {
 
 @media (min-width: 1280px) {
   .swiper-property .swiper-slide {
-    transition: transform 0.5s ease, background-color 0.5s ease;
+    transition:
+      transform 0.5s ease,
+      background-color 0.5s ease;
     transform: scale(0.8);
     background-color: #91a4b6;
   }
@@ -207,13 +311,16 @@ body {
 }
 
 .swiper-feedback .swiper-slide {
-  transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    background-color 0.5s ease;
   transform: scale(0.92);
-  background-color: #EEF3F7;
+  background-color: #eef3f7;
 }
 .swiper-feedback .swiper-slide-active {
   transform: scale(1);
-  background-color: #FCFDFD !important;
+  background-color: #fcfdfd !important;
 }
 
 #reviews .swiper-slide {
@@ -253,12 +360,15 @@ body {
   }
 }
 .cases-dot {
-  transition: width 0.25s ease, height 0.25s ease, background-color 0.25s ease;
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    background-color 0.25s ease;
 }
 .cases-dot:not(.cases-dot-active) {
   width: 0.75rem;
   height: 0.75rem;
-  background-color: #C8D2D0;
+  background-color: #c8d2d0;
 }
 .cases-dot.cases-dot-active {
   width: 1.25rem;
@@ -293,7 +403,10 @@ body {
   }
 
   .swiper-feedback .swiper-slide {
-    transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+    transition:
+      transform 0.5s ease,
+      opacity 0.5s ease,
+      background-color 0.5s ease;
     transform: scale(0.8);
   }
   .swiper-feedback .swiper-slide-active {
