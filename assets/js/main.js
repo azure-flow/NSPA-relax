@@ -21,6 +21,20 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  // Testimonial Swiper
+  let testimonialSwiper = new Swiper(".swiper-testimonial", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+    },
+    navigation: {
+      nextEl: ".testimonial-button-next",
+      prevEl: ".testimonial-button-prev",
+    },
+  });
+
   // -------------------------  Others  -----------------------------------
 
   // Scroll to Top Button

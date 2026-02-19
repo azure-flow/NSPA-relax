@@ -62,7 +62,13 @@
           <button
             class="flex gap-2 items-center justify-center md:px-12 lg:px-8 py-6 text-[16px] lg:text-[18px] xl:text-[21px] bg-gradient-to-r from-[#89b8e7] to-[#2881c8] hover:bg-white text-white hover:text-[#193759e5] transition">
             Book now
-            <span class="w-[19px] aspect-square block rounded-full border border-[1px] border-white"></span>
+            <svg width="22px" height="22px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <circle cx="11" cy="11" r="10.5" stroke="white" stroke-width="1" />
+              <polyline points="6 11 16 11 10 7" stroke="white" stroke-width="1" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+
+            <!-- <span class="w-[19px] aspect-square block rounded-full border border-[1px] border-white"></span> -->
           </button>
         </div>
       </nav>
@@ -81,8 +87,8 @@
   <section class="w-full relative">
     <div class="w-full flex justify-center items-end mx-auto h-full bg-cover bg-center">
       <div class="flex w-[64px] justify-center items-end pb-36">
-        <div class="flex flex-col items-center">
-          <p class="[writing-mode:vertical-rl] text-[#008FD2] text-[20px] xl:text-[24px] font-semibold">
+        <div class="flex flex-col items-center gap-4">
+          <p class="[writing-mode:vertical-rl] blue-gradient-text text-[20px] xl:text-[24px] font-semibold">
             SCROLL
           </p>
           <div class="relative w-[1px] h-[100px] bg-[#008FD2]">
@@ -114,6 +120,7 @@
     <div class="absolute -bottom-1 z-10">
       <img src="assets/images/flow-mark00.webp" class="w-full h-auto">
     </div>
+    <img src="assets/images/flow-mark-sm.webp" class="absolute bottom-10 -right-[1px] max-w-[220px] z-20 w-full h-auto">
   </section>
   <section id="our-services" class="pt-28 pb-20 w-full text-center px-[30px] md:px-0">
     <div class="w-full flex flex-col gap-36 md:mb-4 lg:mb-6 xl:mb-8">
@@ -336,9 +343,58 @@
   </section>
   <section class="w-full py-32">
     <div class="w-full flex flex-col justify-center items-end mx-auto h-full bg-cover bg-center">
-      <div class="relative flex w-full">
-        <img src="assets/images/text-R.nSPA.webp" class="max-w-[40vw] w-full h-auto absolute top-0 left-0">
-        <h3 class="w-full text-[40px] xl:text-[50px] font-bodoni text-center font-regular">VOICE & MOMENTS</h3>
+      <div class="w-full relative pb-20">
+        <div class="relative flex w-full">
+          <img src="assets/images/text-R.nSPA.webp" class="max-w-[40vw] w-full h-auto">
+          <h3
+            class="w-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-[40px] xl:text-[50px] font-bodoni text-center font-regular">
+            VOICE & MOMENTS
+          </h3>
+        </div>
+      </div>
+      <div class="w-full px-[280px] pb-20">
+        <div class="w-full relative mx-auto">
+          <button
+            class="testimonial-button-next absolute z-30 top-1/2 right-0 translate-x-1/2 -translate-y-1/2 !text-gray-700 w-[40px] aspect-[1] text-[20px] border-[2px] rounded-full border-gray-200 bg-white">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+          <button
+            class="testimonial-button-prev absolute z-30 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 !text-gray-700 w-[40px] aspect-[1] text-[20px] border-[2px] rounded-full border-gray-200 bg-white">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <div class="w-full swiper swiper-testimonial relative">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide border-[2px] bg-white/80 border-gray-200 rounded-[20px] p-4">
+                <div class="flex flex-col gap-4 py-20">
+                  <p class="text-[40px] text-gray-500 text-center leading-relaxed">
+                    1
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide border-[2px] bg-white/80 border-gray-200 rounded-[20px] p-4">
+                <div class="flex flex-col gap-4 py-20">
+                  <p class="text-[40px] text-gray-500 text-center leading-relaxed">
+                    2
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide border-[2px] bg-white/80 border-gray-200 rounded-[20px] p-4">
+                <div class="flex flex-col gap-4 py-20">
+                  <p class="text-[40px] text-gray-500 text-center leading-relaxed">
+                    3
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide border-[2px] bg-white/80 border-gray-200 rounded-[20px] p-4">
+                <div class="flex flex-col gap-4 py-20">
+                  <p class="text-[40px] text-gray-500 text-center leading-relaxed">
+                    4
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -354,8 +410,8 @@
               <span class="blue-gradient-text text-[35px]">Q</span>
               トリートメントメニューが決まらない？わからない？
             </span>
-            <span class="text-[32px] absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator">ー</span>
+            <span class="text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
+              <span class="expanded-indicator !font-sans !font-medium">ー</span>
               <span class="collapsed-indicator">+</span>
             </span>
           </label>
@@ -377,8 +433,8 @@
               <span class="blue-gradient-text text-[35px]">Q</span>
               トリートメントメニューが決まらない？わからない？
             </span>
-            <span class="text-[32px] absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator">ー</span>
+            <span class="text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
+              <span class="expanded-indicator !font-sans !font-medium">ー</span>
               <span class="collapsed-indicator">+</span>
             </span>
           </label>
@@ -386,7 +442,6 @@
             <p class="!px-0 flex justify-start items-center gap-4 border-t border-black/50">
               <span class="blue-gradient-text text-[35px]">A</span>
               セラピストが電話にてカウンセリングいたします。<br>
-              その後、<span class="text-[#ed5353]">お客様に合ったメニューをご提案</span>いたします。
             </p>
           </div>
         </div>
@@ -397,8 +452,8 @@
               <span class="blue-gradient-text text-[35px]">Q</span>
               授乳中はトリートメントできますか？
             </span>
-            <span class="text-[32px] absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator">ー</span>
+            <span class="text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
+              <span class="expanded-indicator !font-sans !font-medium">ー</span>
               <span class="collapsed-indicator">+</span>
             </span>
           </label>
@@ -416,8 +471,8 @@
               <span class="blue-gradient-text text-[35px]">Q</span>
               予約は必要ですか？
             </span>
-            <span class="text-[32px] absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator">ー</span>
+            <span class="text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
+              <span class="expanded-indicator !font-sans !font-medium">ー</span>
               <span class="collapsed-indicator">+</span>
             </span>
           </label>
@@ -435,8 +490,8 @@
               <span class="blue-gradient-text text-[35px]">Q</span>
               アメニティはなにがありますか？
             </span>
-            <span class="text-[32px] absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator">ー</span>
+            <span class="text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
+              <span class="expanded-indicator !font-sans !font-medium">ー</span>
               <span class="collapsed-indicator">+</span>
             </span>
           </label>
@@ -454,8 +509,8 @@
               <span class="blue-gradient-text text-[35px]">Q</span>
               男性でも受けられますか？
             </span>
-            <span class="text-[32px] absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator">ー</span>
+            <span class="text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
+              <span class="expanded-indicator !font-sans !font-medium">ー</span>
               <span class="collapsed-indicator">+</span>
             </span>
           </label>
@@ -473,8 +528,8 @@
               <span class="blue-gradient-text text-[35px]">Q</span>
               支払い方法は？
             </span>
-            <span class="text-[32px] absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator">ー</span>
+            <span class="text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
+              <span class="expanded-indicator !font-sans !font-medium">ー</span>
               <span class="collapsed-indicator">+</span>
             </span>
           </label>
@@ -492,8 +547,8 @@
               <span class="blue-gradient-text text-[35px]">Q</span>
               個室ですか？
             </span>
-            <span class="text-[32px] absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator">ー</span>
+            <span class="text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
+              <span class="expanded-indicator !font-sans !font-medium">ー</span>
               <span class="collapsed-indicator">+</span>
             </span>
           </label>
@@ -511,8 +566,8 @@
               <span class="blue-gradient-text text-[35px]">Q</span>
               営業時間は何時から何時までですか？　受付は何時までですか？
             </span>
-            <span class="text-[32px] absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator">ー</span>
+            <span class="text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
+              <span class="expanded-indicator !font-sans !font-medium">ー</span>
               <span class="collapsed-indicator">+</span>
             </span>
           </label>
@@ -530,8 +585,8 @@
               <span class="blue-gradient-text text-[35px]">Q</span>
               駐車場のサービスはありますか？
             </span>
-            <span class="text-[32px] absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator">ー</span>
+            <span class="text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
+              <span class="expanded-indicator !font-sans !font-medium">ー</span>
               <span class="collapsed-indicator">+</span>
             </span>
           </label>
@@ -546,58 +601,59 @@
     </div>
 
   </section>
-  <footer id="footerSection" class="bg-[#193759] w-full pt-20 pb-24 lg:pt-[120px] lg:pb-[300px]">
+  <footer id="footerSection" class="relative bg-[#f9f6f3] w-full pt-20 pb-24 lg:pt-[150px] lg:pb-3">
     <div
-      class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center px-12 lg:px-0 gap-12 md:gap-10">
-      <div class="flex-1 flex flex-row gap-10 lg:gap-12 w-full md:w-auto lg:px-8">
-        <div class="flex-1 flex flex-col gap-4 lg:gap-6 min-w-[80px]">
-          <a href="index.html" class="hidden lg:block text-[#F5F7F9] text-[16px] leading-[1.7] tracking-wide">TOP</a>
-          <a href="https://chachamaru-estate.com/company"
-            class="block lg:hidden text-[#F5F7F9] text-[16px] leading-[1.7] tracking-wide">会社概要</a>
-          <a href="investment.html" class="text-[#F5F7F9] text-[16px] leading-[1.7] tracking-wide">投資用不動産</a>
-          <a href="rebuilding.html" class="text-[#F5F7F9] text-[16px] leading-[1.7] tracking-wide">不動産再生事業</a>
-          <a href="management.html" class="text-[#F5F7F9] text-[16px] leading-[1.7] tracking-wide">マンション管理 </a>
+      class="absolute top-0 left-0 w-full h-full bg-[url('assets/images/flow-footer.webp')] bg-[length:100%_calc(100%+5px)] bg-no-repeat bg-center">
+    </div>
+    <div class="w-full flex flex-col gap-14">
+      <div class="w-full flex justify-between px-64 relative z-10">
+        <div class="w-1/2 flex justify-start items-center">
+          <img src="assets/images/logo-footer.webp" alt="ちゃちゃまる不動産DX Logo" class="max-w-[112px] w-full h-auto">
         </div>
-        <div class="flex-1 flex flex-col gap-4 lg:gap-6 min-w-[80px]">
-          <a href="https://chachamaru-estate.com/staff"
-            class="text-[#F5F7F9] text-[16px] leading-[1.7] tracking-wide mt-0 font-normal">スタッフ紹介</a>
-          <a href="https://chachamaru-estate.com/recruit"
-            class="text-[#F5F7F9] text-[16px] leading-[1.7] tracking-wide">採用情報</a>
-          <a href="#" class="text-[#F5F7F9] text-[16px] leading-[1.7] tracking-wide">入居者さまへ</a>
-          <a href="#" class="hidden lg:block text-[#F5F7F9] text-[16px] leading-[1.7] tracking-wide">資料請求</a>
-          <a href="https://chachamaru-estate.com/contact"
-            class="block lg:hidden text-[#F5F7F9] text-[16px] leading-[1.7] tracking-wide">問い合わせ</a>
+        <div class="w-1/2 flex justify-end items-center">
+          <div class="grid grid-cols-3 gap-x-16 gap-y-5">
+            <div class="col-span-1 flex flex-col gap-4">
+              <a href="#"
+                class="text-[#3C3C3C] text-[16px] xl:text-[18px] text-white leading-[1.7] tracking-wide">Home</a>
+              <a href="#"
+                class="text-[#3C3C3C] text-[16px] xl:text-[18px] text-white leading-[1.7] tracking-wide">Menu</a>
+              <a href="#"
+                class="text-[#3C3C3C] text-[16px] xl:text-[18px] text-white leading-[1.7] tracking-wide">Access</a>
+            </div>
+            <div class="col-span-1 flex flex-col gap-4">
+              <a href="#"
+                class="text-[#3C3C3C] text-[16px] xl:text-[18px] text-white leading-[1.7] tracking-wide">Concept</a>
+              <a href="#"
+                class="text-[#3C3C3C] text-[16px] xl:text-[18px] text-white leading-[1.7] tracking-wide">Items</a>
+              <a href="#"
+                class="text-[#3C3C3C] text-[16px] xl:text-[18px] text-white leading-[1.7] tracking-wide">F&Q</a>
+            </div>
+            <div class="col-span-1 flex flex-col gap-4">
+              <a href="rebuilding.html"
+                class="text-[#3C3C3C] text-[16px] xl:text-[18px] text-white leading-[1.7] tracking-wide">Room</a>
+            </div>
+            <div class="col-span-3 flex gap-6">
+              <a href="#" class="text-[#3C3C3C] text-[16px] xl:text-[18px] text-white leading-[1.7] tracking-wide">
+                <span class="fab fa-instagram text-white text-[20px]"></span>
+              </a>
+              <a href="#" class="text-[#3C3C3C] text-[16px] xl:text-[18px] text-white leading-[1.7] tracking-wide">
+                <span class="fab fa-google text-white text-[16px]"></span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div
-        class="flex-1 flex flex-col-reverse md:flex-col items-center md:items-start gap-14 md:gap-8 w-full md:w-auto">
-        <div class="flex items-center gap-2">
-          <a href="index.html">
-            <img src="assets/images/logo.webp" alt="ちゃちゃまる不動産DX Logo" class="w-[400px] h-auto"
-              style="filter: brightness(0) invert(1);" />
-          </a>
-        </div>
-        <div id="sns-field" class="flex justify-between items-center gap-4 xl:gap-6 px-8 lg:px-12 pb-2">
-          <a href="https://www.instagram.com/chachamarufudosan?igsh=Y3BicWZkbXY2cGpu&utm_source=qr" target="_blank"
-            rel="noopener" class="flex items-center gap-2 text-[#3C3C3C] hover:text-[#227093] transition">
-            <img src="assets/images/instagram-ico.webp" alt="Instagram" class="w-[28px] lg:w-[32px] h-auto">
-          </a>
-          <a href="https://x.com/chachamaruest?s=21" target="_blank" rel="noopener"
-            class="flex items-center gap-2 text-[#3C3C3C] hover:text-[#227093] transition">
-            <img src="assets/images/x-ico.webp" alt="Twitter" class="w-[23px] lg:w-[27px] h-auto">
-          </a>
-          <a href="https://www.youtube.com/@chachamaru-sl" target="_blank" rel="noopener"
-            class="flex items-center gap-2 text-[#3C3C3C] hover:text-[#227093] transition">
-            <img src="assets/images/youtube-ico.webp" alt="YouTube" class="w-[123px] lg:w-[137px] h-auto">
-          </a>
-        </div>
+      <div class="w-full flex justify-center items-center relative z-10">
+        <p class="text-[#3C3C3C] text-[10px] xl:text-[12px] text-white leading-[1.7] tracking-wide">
+          Copyright © NSPA All Rights Reserved.
+        </p>
       </div>
     </div>
   </footer>
   <script src="assets/js/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
-  <!-- <script>
+  <script>
     $(".fv-top-ripples").ripples({
       resolution: 256,
       dropRadius: 20,
@@ -611,7 +667,7 @@
       var y = e.clientY - rect.top;
       $el.ripples("drop", x, y, 20, 0.04);
     });
-  </script> -->
+  </script>
 </body>
 
 </html>
