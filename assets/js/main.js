@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
-      pauseOnMouseEnter: true,
     },
   });
 
@@ -112,6 +111,16 @@ document.addEventListener("DOMContentLoaded", function () {
   if (hamburgerBtn) {
     hamburgerBtn.addEventListener("click", toggleModal);
   }
+
+  // Close modal when any in-modal anchor link is clicked (anchor navigation will then work)
+  const menuModalLinks = menu_modal ? menu_modal.querySelectorAll('a[href^="#"]') : [];
+  menuModalLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (!menu_modal.classList.contains("opacity-0")) {
+        toggleModal();
+      }
+    });
+  });
 
   document.addEventListener("keydown", function (e) {
     if (
