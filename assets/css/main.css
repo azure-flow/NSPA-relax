@@ -107,8 +107,43 @@ body {
   background: linear-gradient(90deg, #3f9f6f 0%, #3f9f6f 100%);
 }
 
+/* Nav: show active line image only on the active anchor (scroll/hash) */
+.nav-link.nav-active .nav-active-line {
+  opacity: 1;
+}
+
 .blue-gradient {
   background: linear-gradient(90deg, #73b1e1 0%, #008fd2 60%, #0079c1 100%);
+}
+
+.blue-gradient:hover {
+  background: linear-gradient(90deg,rgb(107, 175, 226) 0%,rgb(5, 150, 218) 60%,rgb(0, 111, 175) 100%);
+}
+
+.blue-gradient-hover {
+  position: relative;
+  isolation: isolate;
+}
+.blue-gradient-hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgb(162, 202, 233) 0%,
+    rgb(93, 191, 236) 60%,
+    rgb(26, 147, 218) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.blue-gradient-hover:hover::before {
+  opacity: 1;
+}
+.blue-gradient-hover button,
+.blue-gradient-hover svg {
+  transition: color 0.35s ease;
 }
 
 .green-gradient-text {

@@ -29,7 +29,7 @@
 </head>
 
 <body class="relative bg-[url('assets/images/bg-default.webp')] bg-center">
-  <header class="fixed w-full justify-center bg-white z-30">
+  <header class="fixed w-full justify-center bg-white z-40">
     <div class="relative w-full mx-auto flex items-center justify-end">
       <div class="absolute top-0 left-0 flex items-center shrink-0">
         <a href="index.html">
@@ -39,25 +39,37 @@
 
       <nav id="mobileNav"
         class="w-full lg:w-auto flex flex-row justify-end md:justify-start lg:items-center gap-5 lg:gap-6 xl:gap-[72px] overflow-hidden">
-        <a href="#home"
-          class="hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">
+        <a href="#home" data-nav="home"
+          class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">
           Home
+          <img src="assets/images/active-line.webp" alt="" class="nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-auto opacity-0 transition-opacity duration-200" aria-hidden="true">
         </a>
-        <a href="#concept"
-          class="hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">
+        <a href="#concept" data-nav="concept"
+          class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">
           Concept
+          <img src="assets/images/active-line.webp" alt="" class="nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-auto opacity-0 transition-opacity duration-200" aria-hidden="true">
         </a>
-        <a href="#room"
-          class="hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Room</a>
-        <a href="#menu"
-          class="hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Menu</a>
-        <a href="#item"
-          class="hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Item</a>
-        <a href="#access"
-          class="hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Access</a>
-        <a href="#qa"
-          class="hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Q
-          &amp; A</a>
+        <a href="#room" data-nav="room"
+          class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Room
+          <img src="assets/images/active-line.webp" alt="" class="nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-auto opacity-0 transition-opacity duration-200" aria-hidden="true">
+        </a>
+        <a href="#menu" data-nav="menu"
+          class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Menu
+          <img src="assets/images/active-line.webp" alt="" class="nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-auto opacity-0 transition-opacity duration-200" aria-hidden="true">
+        </a>
+        <a href="#item" data-nav="item"
+          class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Item
+          <img src="assets/images/active-line.webp" alt="" class="nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-auto opacity-0 transition-opacity duration-200" aria-hidden="true">
+        </a>
+        <a href="#access" data-nav="access"
+          class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Access
+          <img src="assets/images/active-line.webp" alt="" class="nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-auto opacity-0 transition-opacity duration-200" aria-hidden="true">
+        </a>
+        <a href="#qa" data-nav="qa"
+          class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Q
+          &amp; A
+          <img src="assets/images/active-line.webp" alt="" class="nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-auto opacity-0 transition-opacity duration-200" aria-hidden="true">
+        </a>
         <span
           class="text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-[10px] lg:py-0">
           <span>Jp</span>/<span>En</span>
@@ -67,8 +79,8 @@
             class="hidden lg:flex gap-2 items-center justify-center md:px-12 lg:px-8 py-6 text-[16px] lg:text-[18px] xl:text-[21px] bg-gradient-to-r from-[#89b8e7] to-[#2881c8] hover:bg-white text-white hover:text-[#193759e5] transition">
             Book now
             <svg width="22px" height="22px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
-              <circle cx="11" cy="11" r="10.5" stroke="white" stroke-width="1" />
-              <polyline points="6 11 16 11 10 7" stroke="white" stroke-width="1" fill="none" stroke-linecap="round"
+              <circle cx="11" cy="11" r="10.5" stroke="currentColor" stroke-width="1" />
+              <polyline points="6 11 16 11 10 7" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
             <!-- <span class="w-[19px] aspect-square block rounded-full border border-[1px] border-white"></span> -->
@@ -85,7 +97,7 @@
   </header>
   <div id="home" class="w-full h-[44px] lg:h-[60px]">
   </div>
-  <section class="w-full relative overflow-x-hidden">
+  <section class="w-full relative">
     <div class="w-full flex justify-center items-end mx-auto h-full bg-cover bg-center">
       <div class="hidden md:flex w-[64px] justify-center items-end pb-36">
         <div class="flex flex-col items-center gap-4">
@@ -100,8 +112,9 @@
           </div>
         </div>
       </div>
-      <div class="relative w-full h-full swiper swiper-fv-top">
+      <div class="relative w-full swiper swiper-fv-top">
         <div class="swiper-wrapper w-full h-[calc(100vh-30px)] relative">
+        <!-- <div class="swiper-wrapper w-full h-[calc(100vh-30px)] relative"> -->
           <div
             class="z-20 swiper-slide fv-top-ripples w-full h-full bg-[url('assets/images/fv-top01.webp')] bg-cover bg-center">
             <div class="slide-inner"></div>
@@ -122,9 +135,9 @@
       <img src="assets/images/flow-mark00.webp" class="w-full h-auto">
     </div>
     <img src="assets/images/flow-mark-sm.webp"
-      class="absolute -bottom-6 lg:bottom-10 -right-[1px] max-w-[100px] lg:max-w-[150px] xl:max-w-[220px] z-20 w-full h-auto">
+      class="absolute -bottom-6 lg:bottom-10 right-0 max-w-[100px] lg:max-w-[150px] xl:max-w-[220px] z-20 w-full h-auto">
   </section>
-  <section id="concept" class="pt-10 md:pt-20 lg:pt-24 xl:pt-28 pb-20 w-full text-center">
+  <section id="concept" class="relative pt-10 md:pt-20 lg:pt-24 xl:pt-28 pb-20 w-full text-center">
     <div class="w-full flex flex-col gap-16 md:gap-20 lg:gap-24 xl:gap-28 2xl:gap-36 md:mb-4 lg:mb-6 xl:mb-8">
       <h2
         class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-wide">
@@ -650,17 +663,11 @@
               class="!px-0 flex justify-start items-center gap-2 lg:gap-3 xl:gap-4 border-t text-[14px] lg:text-[16px] xl:text-[18px] border-black/50">
               <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
               駐車場のサービスはありますか？たちつてと
-              あかさあかさあかさ、いうきしいうきしいうきし、えけせえけせえけせ、おこそおこそおこそ。
-              あしうけえこさきいせおくそかえすきこあしうけえこ。
-              かさあきしうくせえけそおこさあきしうくせえけそおこ。
-              さこえくしあけすいこさこえくしあけすいこ。
-              あこさけいうすえきそあこさけいうすえきそ。
             </p>
           </div>
         </div>
       </section>
     </div>
-
   </section>
   <footer id="footerSection" class="relative bg-[#f9f6f3] w-full pt-20 pb-2 lg:pt-[150px] lg:pb-3">
     <div
@@ -698,21 +705,6 @@
                 <span class="fab fa-google text-white text-[16px]"></span>
               </a>
             </div>
-            <!-- あせ : sweat
-            あそこ : there
-            いえ : house
-            いし : stone
-            いす : chair
-            いか : squid
-            うえ : up / above
-            うし : cow
-            うす : thin / light
-            えき : station
-            えさ : feed / bait
-            おか : hill
-            おき : open sea
-            おけ : bucket
-            おこえ : voice (polite form) -->
           </div>
         </div>
       </div>
@@ -723,34 +715,40 @@
       </div>
     </div>
   </footer>
-  <section class="w-full">
-    <div class="grid grid-cols-3">
-      <div class="">
-        <button class="w-full flex items-center justify-center xl:text-[18px] gap-6">
-          Oneline Reserve
-          <svg width="22px" height="22px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <circle cx="11" cy="11" r="10.5" stroke="black" stroke-width="1"></circle>
-            <polyline points="6 11 16 11 10 7" stroke="black" stroke-width="1" fill="none" stroke-linecap="round"
+  <section class="w-full pt-6">
+    <div class="grid grid-cols-3 bg-[#FFFDEA]">
+      <div class="lg:py-2 group blue-gradient-hover">
+        <button
+          class="w-full flex items-center justify-center text-[16px] xl:text-[18px] py-4 gap-2 lg:gap-4 xl:gap-6 text-[#0c2340] text-start pl-5 pr-1 group-hover:text-white">
+          <span class="flex-1 lg:flex-none">Oneline Reserve</span>
+          <svg class="w-[20px] lg:w-[22px] h-[22px] text-gray-500 group-hover:text-white duration-200 mt-1"
+            viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <circle cx="11" cy="11" r="10.5" stroke="currentColor" stroke-width="1"></circle>
+            <polyline points="6 11 16 11 10 7" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"
               stroke-linejoin="round"></polyline>
           </svg>
         </button>
       </div>
-      <div class="">
-        <button class="w-full flex items-center justify-center xl:text-[18px] gap-6">
-          LINE Reserve
-          <svg width="22px" height="22px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <circle cx="11" cy="11" r="10.5" stroke="black" stroke-width="1"></circle>
-            <polyline points="6 11 16 11 10 7" stroke="black" stroke-width="1" fill="none" stroke-linecap="round"
+      <div class="lg:py-2 group blue-gradient-hover">
+        <button
+          class="w-full flex items-center justify-center text-[16px] xl:text-[18px] py-4 gap-2 lg:gap-4 xl:gap-6 text-[#0c2340] text-start pl-7 pr-1 group-hover:text-white lg:border-x border-black/30">
+          <span class="flex-1 lg:flex-none">LINE Reserve</span>
+          <svg class="w-[20px] lg:w-[22px] h-[22px] text-gray-500 group-hover:text-white duration-200 mt-1"
+            viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <circle cx="11" cy="11" r="10.5" stroke="currentColor" stroke-width="1"></circle>
+            <polyline points="6 11 16 11 10 7" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"
               stroke-linejoin="round"></polyline>
           </svg>
         </button>
       </div>
-      <div class="">
-        <button class="w-full flex items-center justify-center xl:text-[18px] gap-6">
-          Hot Pepper Reserve
-          <svg width="22px" height="22px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <circle cx="11" cy="11" r="10.5" stroke="black" stroke-width="1"></circle>
-            <polyline points="6 11 16 11 10 7" stroke="black" stroke-width="1" fill="none" stroke-linecap="round"
+      <div class="lg:py-2 group blue-gradient-hover">
+        <button
+          class="w-full flex items-center justify-center text-[16px] xl:text-[18px] py-4 gap-2 lg:gap-4 xl:gap-6 text-[#0c2340] text-start pl-5 pr-1 group-hover:text-white">
+          <span class="flex-1 lg:flex-none">HotPepper Reserve</span>
+          <svg class="w-[20px] lg:w-[22px] h-[22px] text-gray-500 group-hover:text-white duration-200 mt-1"
+            viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <circle cx="11" cy="11" r="10.5" stroke="currentColor" stroke-width="1"></circle>
+            <polyline points="6 11 16 11 10 7" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"
               stroke-linejoin="round"></polyline>
           </svg>
         </button>

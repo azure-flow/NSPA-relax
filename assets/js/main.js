@@ -122,4 +122,51 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // -------------------------  Nav active state (anchor links + scroll)  --------
+  const navLinks = document.querySelectorAll('.nav-link[data-nav]');
+  const sectionIds = ['home', 'concept', 'room', 'menu', 'item', 'access', 'qa'];
+
+  function setActiveNav(id) {
+    navLinks.forEach(function (link) {
+      if (link.getAttribute('data-nav') === id) {
+        link.classList.add('nav-active');
+      } else {
+        link.classList.remove('nav-active');
+      }
+    });
+  }
+
+  function updateActiveFromHash() {
+    const hash = window.location.hash.slice(1);
+    if (hash && sectionIds.includes(hash)) {
+      setActiveNav(hash);
+      return true;
+    }
+    return false;
+  }
+
+  // On load: if hash is set, use it; otherwise rely on Intersection Observer
+  if (updateActiveFromHash()) {
+    // hash drove state; observer will take over on scroll
+  } else {
+    setActiveNav('home');
+  }
+
+  window.addEventListener('hashchange', updateActiveFromHash);
+
+  // Intersection Observer: set active nav from scroll position (which section is in view)
+  const headerOffset = 120;
+  const observerOptions = { root: null, rootMargin: `-${headerOffset}px 0px -60% 0px`, threshold: 0 };
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id;
+      if (sectionIds.includes(id)) setActiveNav(id);
+    });
+  }, observerOptions);
+
+  sectionIds.forEach(function (id) {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
 });
