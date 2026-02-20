@@ -168,7 +168,7 @@ body {
 
 @media (max-width: 767px) {
   .tab__label {
-    padding: 8px 16px;
+    padding: 8px 30px 8px 16px;
   }
 }
 
@@ -199,110 +199,6 @@ body {
 /* Arrow animation */
 .tab input:not(:checked) + .tab__label:hover::after {
   animation: bounce 0.5s infinite;
-}
-
-/* Mobile Navigation Slide Animation */
-#mobileNav {
-  transition:
-    max-height 0.4s ease-in-out,
-    opacity 0.3s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  #mobileNav {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-  }
-
-  #mobileNav.menu-open {
-    opacity: 1;
-  }
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-  }
-  .swiper-pagination-bullet-active {
-    background-color: #193759;
-    width: 14px;
-    height: 14px;
-  }
-}
-
-@media (min-width: 1024px) {
-  #mobileNav {
-    max-height: none !important;
-    opacity: 1 !important;
-    overflow: visible !important;
-  }
-  .swiper-pagination-bullet-active {
-    background-color: #193759 !important;
-    width: 22px !important;
-    height: 22px !important;
-  }
-  .swiper-pagination-bullet {
-    width: 14px;
-    height: 14px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .swiper-property .swiper-slide {
-    transition:
-      transform 0.5s ease,
-      background-color 0.5s ease;
-    transform: scale(0.8);
-    background-color: #91a4b6;
-  }
-
-  .swiper-property .swiper-slide-active {
-    transform: scale(1);
-    background-color: #eaf0f6 !important;
-  }
-}
-@media (max-width: 768px) {
-  .swiper-property .swiper-slide {
-    transition: transform 0.5s ease;
-    transform: scale(0.8);
-  }
-
-  .swiper-property .swiper-slide-active {
-    transform: scale(1);
-  }
-}
-
-/* Research slider: ensure slide flows on pagination click (mobile only) */
-@media (max-width: 767px) {
-  .swiper-research .swiper-wrapper {
-    transition-property: transform;
-    transition-timing-function: ease-out;
-    transition-duration: 0.5s;
-  }
-}
-
-/* Research slider pagination: single track + one moving dot (like image, smartphone only) */
-.swiper-research-pagination {
-  padding: 0 8px;
-}
-.swiper-research-pagination .research-pagination-track {
-  position: relative;
-  width: 100%;
-  max-width: 120px;
-  height: 10px;
-  background: #d9dee3;
-  border-radius: 9999px;
-  cursor: pointer;
-}
-.swiper-research-pagination .research-pagination-thumb {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 14px;
-  height: 14px;
-  background-color: #373b60;
-  border-radius: 50%;
-  transition: left 0.5s ease-out;
-  pointer-events: none;
 }
 
 /* Let clicks pass through to the ripple canvas on the FV slides */

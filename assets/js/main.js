@@ -29,6 +29,22 @@ document.addEventListener("DOMContentLoaded", function () {
     autoplay: {
       delay: 2500,
     },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      480: {
+        slidesPerView: 1,
+      },
+      320: {
+        slidesPerView: 1.3,
+        centeredSlides: true,
+        spaceBetween: 10,
+      },
+    },
     navigation: {
       nextEl: ".testimonial-button-next",
       prevEl: ".testimonial-button-prev",
@@ -69,58 +85,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ------------------------------------------------------------
 
-  // Mobile Navigation Slide Animation
-  const hamburgerBtn = document.getElementById("hamburgerBtn");
-  const mobileNav = document.getElementById("mobileNav");
-  const closeNavBtn = document.getElementById("closeNavBtn");
+  // ------------------------------------------------------------
 
-  function openMobileNav() {
-    if (mobileNav && window.innerWidth < 1024) {
-      // Temporarily remove max-height to get the natural height
-      mobileNav.style.maxHeight = "none";
-      hamburgerBtn.style.display = "none";
-      const height = mobileNav.scrollHeight;
-      // Set back to 0 to prepare for animation
-      mobileNav.style.maxHeight = "0";
-      // Force reflow
-      mobileNav.offsetHeight;
-      // Now animate to the actual height
-      requestAnimationFrame(() => {
-        mobileNav.style.maxHeight = "800px";
-        mobileNav.classList.add("menu-open");
-      });
-    }
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const menu_modal = document.getElementById("menu_modal");
+  const closeMenuBtn = document.getElementById("closeMenuBtn");
+
+  if (closeMenuBtn) {
+    closeMenuBtn.addEventListener("click", toggleModal);
   }
 
-  function closeMobileNav() {
-    if (mobileNav && window.innerWidth < 1024) {
-      // Get current height
-      const height = mobileNav.scrollHeight;
-      mobileNav.style.maxHeight = height + "px";
-      // Force reflow
-      mobileNav.offsetHeight;
-      // Animate to 0
-      requestAnimationFrame(() => {
-        mobileNav.style.maxHeight = "0";
-        mobileNav.classList.remove("menu-open");
-      });
-      hamburgerBtn.style.display = "block";
+  function toggleModal() {
+    if (menu_modal.classList.contains("opacity-0")) {
+      // open
+      menu_modal.classList.remove("pointer-events-none", "opacity-0");
+      menu_modal.classList.add("pointer-events-auto", "opacity-100");
+    } else {
+      // close
+      menu_modal.classList.add("opacity-0");
+      menu_modal.classList.remove("opacity-100", "pointer-events-auto");
+      menu_modal.classList.add("pointer-events-none");
+      document.body.style.overflow = "";
     }
   }
 
   if (hamburgerBtn) {
-    hamburgerBtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      openMobileNav();
-    });
+    hamburgerBtn.addEventListener("click", toggleModal);
   }
 
-  if (closeNavBtn) {
-    closeNavBtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      closeMobileNav();
-    });
-  }
+  document.addEventListener("keydown", function (e) {
+    if (
+      (e.key === "Escape" || e.key === "Esc") &&
+      !menu_modal.classList.contains("opacity-0")
+    ) {
+      toggleModal();
+    }
+  });
+
 });
-
-
