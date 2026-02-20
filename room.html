@@ -146,9 +146,8 @@
             class="z-20 swiper-slide fv-top-ripples w-full h-full bg-[url('assets/images/fv-top04.webp')] bg-cover bg-center">
             <div class="slide-inner"></div>
           </div>
-          <p class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[12%] text-white text-center text-[24px] leading-[2.2] tracking-[4px] lg:tracking-[8px] font-medium z-30" style="text-shadow: 0px 0px 24px black;">心と身体が輝く<br class="block lg:hidden">至福の時間</p>
         </div>
-      </div> 
+      </div>
     </div>
     <div class="absolute -bottom-1 z-10">
       <img src="assets/images/flow-mark00.webp" class="w-full h-auto">
@@ -848,22 +847,6 @@
     </div>
   </div>
   <script src="assets/js/main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
-  <script>
-    $(".fv-top-ripples").ripples({
-      resolution: 256,
-      dropRadius: 20,
-      perturbance: 0.01,
-    });
-    $(".fv-top-ripples").on("click", function (e) {
-      var $el = $(this);
-      var rect = this.getBoundingClientRect();
-      var x = e.clientX - rect.left;
-      var y = e.clientY - rect.top;
-      $el.ripples("drop", x, y, 20, 0.04);
-    });
-  </script>
 </body>
 
 </html>
