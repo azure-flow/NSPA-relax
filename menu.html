@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NSPA</title>
+  <title>NSPA | Menu</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
     rel="stylesheet" />
@@ -22,6 +22,21 @@
     html {
       scroll-behavior: smooth;
     }
+
+    /* Menu price table: thin horizontal borders like reference image (light gray, subtle) */
+    .menu-price-table {
+      border-collapse: collapse;
+    }
+
+    .menu-price-table tbody tr:last-child::after {
+      display: block;
+    }
+
+    .menu-price-table tbody td {
+      padding-top: 0.875rem;
+      padding-bottom: 0.875rem;
+      border: none;
+    }
   </style>
 
   <script src="assets/css/tailwind.css"></script>
@@ -37,53 +52,34 @@
           <img src="assets/images/logo.webp" alt="ロゴ" class="w-[120px] lg:w-[200px] xl:w-[220px] 2xl:w-[340px]" />
         </a>
       </div>
-
       <nav id="mobileNav"
         class="w-full lg:w-auto flex flex-row justify-end md:justify-start lg:items-center gap-5 lg:gap-6 xl:gap-[72px] overflow-hidden">
-        <a href="#home" data-nav="home"
+        <a href="index.html#home" data-nav="home"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">
           Home
-          <img src="assets/images/active-line.webp" alt=""
-            class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
-            aria-hidden="true">
         </a>
-        <a href="#concept" data-nav="concept"
+        <a href="index.html#concept" data-nav="concept"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">
           Concept
-          <img src="assets/images/active-line.webp" alt=""
-            class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
-            aria-hidden="true">
         </a>
-        <a href="#room" data-nav="room"
+        <a href="index.html#room" data-nav="room"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Room
           <img src="assets/images/active-line.webp" alt=""
-            class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
+            class="w-[20px] lg:w-[45px] absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto transition-opacity duration-200"
             aria-hidden="true">
         </a>
-        <a href="#menu" data-nav="menu"
+        <a href="index.html#menu" data-nav="menu"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Menu
-          <img src="assets/images/active-line.webp" alt=""
-            class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
-            aria-hidden="true">
         </a>
-        <a href="#item" data-nav="item"
+        <a href="index.html#item" data-nav="item"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Item
-          <img src="assets/images/active-line.webp" alt=""
-            class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
-            aria-hidden="true">
         </a>
-        <a href="#access" data-nav="access"
+        <a href="index.html#access" data-nav="access"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Access
-          <img src="assets/images/active-line.webp" alt=""
-            class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
-            aria-hidden="true">
         </a>
-        <a href="#qa" data-nav="qa"
+        <a href="index.html#qa" data-nav="qa"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Q
           &amp; A
-          <img src="assets/images/active-line.webp" alt=""
-            class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
-            aria-hidden="true">
         </a>
         <span
           class="text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] transition pl-8 lg:pl-0 lg:pr-0 py-[10px] lg:py-0">
@@ -99,7 +95,6 @@
               <polyline points="6 11 16 11 10 7" stroke="currentColor" stroke-width="1" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <!-- <span class="w-[19px] aspect-square block rounded-full border border-[1px] border-white"></span> -->
           </button>
           <button id="hamburgerBtn" class="flex lg:hidden text-white blue-gradient w-full h-full cursor-pointer">
             <div class="flex flex-col justify-center items-center px-[10px] gap-[5px] w-[44px] h-full">
@@ -114,7 +109,7 @@
   <div class="w-full h-[44px] lg:h-[60px]">
   </div>
   <section id="home" class="w-full relative">
-    <div class="w-full flex justify-center items-end mx-auto h-full bg-cover bg-center">
+    <div class="w-full h-[100vh] flex justify-center items-end mx-auto bg-cover bg-center">
       <div class="hidden md:flex w-[64px] justify-center items-end pb-36">
         <div class="flex flex-col items-center gap-4">
           <p class="[writing-mode:vertical-rl] blue-gradient-text text-[20px] xl:text-[24px] font-semibold">
@@ -128,25 +123,10 @@
           </div>
         </div>
       </div>
-      <div class="relative w-full swiper swiper-fv-top">
-        <div class="swiper-wrapper w-full h-[calc(100vh-30px)] relative">
-          <div
-            class="z-20 swiper-slide fv-top-ripples w-full h-full bg-[url('assets/images/fv-top01.webp')] bg-cover bg-center">
-            <div class="slide-inner"></div>
-          </div>
-          <div
-            class="z-20 swiper-slide fv-top-ripples w-full h-full bg-[url('assets/images/fv-top02.jpg')] bg-cover bg-center">
-            <div class="slide-inner"></div>
-          </div>
-          <div
-            class="z-20 swiper-slide fv-top-ripples w-full h-full bg-[url('assets/images/fv-top03.webp')] bg-cover bg-center">
-            <div class="slide-inner"></div>
-          </div>
-          <div
-            class="z-20 swiper-slide fv-top-ripples w-full h-full bg-[url('assets/images/fv-top04.webp')] bg-cover bg-center">
-            <div class="slide-inner"></div>
-          </div>
-        </div>
+      <div class="relative w-full h-full">
+        <div class="z-20 w-full h-full bg-[url('assets/images/fv-top01.webp')] bg-cover bg-center"></div>
+        <p class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[12%] text-white font-bodoni text-center text-[44px] lg:text-[50px] xl:text-[60px] leading-[2.2] tracking-[4px] lg:tracking-[8px] font-medium z-30"
+          style="text-shadow: 0px 0px 24px black;">Menu</p>
       </div>
     </div>
     <div class="absolute -bottom-1 z-10">
@@ -155,540 +135,923 @@
     <img src="assets/images/flow-mark-sm.webp"
       class="absolute -bottom-6 lg:bottom-10 right-0 max-w-[100px] lg:max-w-[150px] xl:max-w-[220px] z-20 w-full h-auto">
   </section>
-  <section id="concept" class="relative pt-10 md:pt-20 lg:pt-24 xl:pt-28 pb-20 w-full text-center">
-    <div class="w-full flex flex-col gap-16 md:gap-20 lg:gap-24 xl:gap-28 2xl:gap-36 md:mb-4 lg:mb-6 xl:mb-8">
+  <section class="w-full relative pt-10 md:pt-10 lg:pt-28 xl:pt-0 pb-20 w-full text-center">
+    <div class="w-full flex flex-col gap-16 lg:gap-20 xl:gap-24">
+      <div>
+        <nav
+          class="w-full flex flex-col lg:flex-row justify-center items-center gap-2 md:gap-4 lg:gap-6 xl:gap-8 xl:py-4">
+          <ul
+            class="max-w-[280px] lg:max-w-full w-full lg:w-auto flex flex-row items-center gap-7 md:gap-4 lg:gap-6 xl:gap-8 text-[14px] lg:text-[16px] xl:text-[20px] font-bodoni font-regular tracking-wide text-[#2e2f34]">
+            <a href="#private-room" class="w-full block text-end text-nowrap hover:underline">BODY</a>
+            <li class="mx-1 lg:mx-3 xl:mx-6">|</li>
+            <a href="#pair-room" class="w-full block text-center text-nowrap hover:underline">HEAD</a>
+            <li class="mx-1 lg:mx-3 xl:mx-6">|</li>
+            <a href="#pair-room" class="w-full block text-center text-nowrap hover:underline">FACIAL</a>
+          </ul>
+        </nav>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <h2
+          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-wide mb-4 lg:mb-5 xl:mb-6">
+          BODY
+        </h2>
+        <p
+          class="text-start lg:text-center text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-[#2e2f34] tracking-wide leading-[2] mb-14 lg:mb-32 xl:mb-40 px-8">
+          ハワイに伝わるLomiLomiで、心身を優しく解放。<br class="hidden lg:block">
+          熟練の手技で全身を整え、新しいエネルギーを満たします。
+        </p>
+        <div class="flex flex-col-reverse lg:flex-row items-center justify-center gap-6 lg:gap-10 xl:gap-20">
+          <div class="flex-1 flex justify-end items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="block lg:hidden text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                Lomi Lomi｜<br>ロミロミマッサージ
+              </h3>
+              <h4
+                class="block lg:hidden text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2">
+                風・波・自然を表現した<br>
+                エヌスパ独自のロミロミマッサージ
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide">
+                セルフケアまでは届かない深部まで、ハワイの癒しを詰め込んだロミロミ。伝統的なハワイアン・ロミロミをベースに、その日のコンディションに合わせたあなただけの究極のリラクゼーションをデザインします。
+                「今日はとにかく肩周りをほぐしたい」「足のむくみをスッキリさせて、顔のくすみも取りたい」いつもとは違った満足感に浸りたい、そんな願いを全て叶えるのがこの150分メニューです。</p>
+            </div>
+          </div>
+          <div class="flex-1">
+            <img src="assets/images/body-balancing.webp" alt="body-balancing" class="w-full h-auto">
+          </div>
+        </div>
+        <div>
+          <div class="w-full mx-auto mt-10 lg:pl-[15%]">
+            <table class="menu-price-table w-auto text-left mx-8 lg:mx-0">
+              <tbody>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                    60分
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] min-w-[90px] align-middle">
+                    ¥8,900
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                    初回体験
+                  </td>
+                </tr>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    80分
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    ¥12,200
+
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                    ２回目ご来店の方おすすめ</td>
+                </tr>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    90分
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    ¥13,680
+
+                  </td>
+                  <td></td>
+                </tr>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    100分 </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    ¥15,100
+
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                    深く整う、上質なロングセッション</td>
+                </tr>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    120分
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    ¥17,820
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                    当店人気NO.1／ボディスクラブ o r セラミドクリーム施術無料</td>
+                </tr>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    10分<br class="block lg:hidden">延長</td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    ¥1,500
+
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10 xl:gap-20">
+          <div class="flex-1">
+            <img src="assets/images/body-balancing.webp" alt="pair-room01" class="w-full h-auto">
+          </div>
+          <div class="w-full lg:w-auto flex-1 flex justify-start items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                F r e e C h o i c e｜<br class="block lg:hidden">フリーチョイス
+              </h3>
+              <h4
+                class="text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2">
+                風・波・自然を表現した<br>
+                エヌスパ独自のロミロミマッサージ
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                ゆっくりと波の音を聴きながら、五感に語りかけるロミロミ<br class="hidden lg:block">施術は、筋肉の疲労を和らげストレスも緩和してまいります。<br>
+                季節の精油をブレンドしたオイルパフュームで、深呼吸からは<br class="hidden lg:block">じまり、リラックスした状態でトリートメントをスタートさせ<br
+                  class="hidden lg:block">ていただきます。
+              </p>
+              <table class="menu-price-table w-auto text-left ">
+                <tbody>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                      150分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium min-w-[90px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      ¥30,000
+                    </td>
+                  </tr>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      150分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      ¥30,000
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                      大切な方へのギフト ※事前決済
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <div class="flex flex-col-reverse lg:flex-row items-center justify-center gap-6 lg:gap-10 xl:gap-20">
+          <div class="flex-1 flex justify-end items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                BODYBALANCING｜<br class="block lg:hidden">ボディバランシング
+              </h3>
+              <h4
+                class="text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2">
+                足圧で巡るカラダへ。<br>
+                筋肉を広範囲に捉え、<br class="block lg:hidden">代謝と血行を即上げ。
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                手の3倍以上の圧力で、全身を心地よく踏みほぐす新感覚のトリートメント。足の広い面を使うことで、手では届きにくい深部のコリまでダイレクトにアプローチします。<br>
+                短時間で血行が促進され、新陳代謝もアップ。施術後は、羽が生えたような体の軽さを実感していただけます。<br>
+                ※お着替え（下のみ）をご用意しております。
+              </p>
+              <table class="menu-price-table w-auto text-left">
+                <tbody>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                      60分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] min-w-[90px] align-middle">
+                      ¥14,850
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="flex-1">
+            <img src="assets/images/body-balancing.webp" alt="pair-room01" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10 xl:gap-20">
+          <div class="flex-1">
+            <img src="assets/images/body-balancing.webp" alt="pair-room01" class="w-full h-auto">
+          </div>
+          <div class="w-full lg:w-auto flex-1 flex justify-start items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                Deep Belly Detox Therapy｜<br class="block lg:hidden">腸もみセラピー
+              </h3>
+              <h4
+                class="text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2">
+                腸から心へ。<br>
+                温めと優しい刺激で、<br class="block lg:hidden">内側から整う感動体験を。
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                腸の状態に寄り添い、心地よいリズムで深部までアプローチ。<br>
+                温めながら解きほぐすことで、身体だけでなく気持ちまでスッと軽やかになります。「お腹が柔らかくなると、こんなに体が楽になるんだ」という驚きの体験をお届けします。
+              </p>
+              <div class="flex flex-row gap-6  lg:gap-10 xl:gap-12">
+                <table class="menu-price-table w-auto text-left">
+                  <tbody>
+                    <tr class="border-y border-[#e5e7eb]">
+                      <td
+                        class="pr-2 xl:px-5 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-normal text-nowrap tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle xl:min-w-[70px]">
+                        20分
+                      </td>
+                      <td
+                        class="pl-2 xl:px-5 text-[14px] lg:text-[20px] xl:text-[23px] font-medium min-w-[90px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                        ¥4,950
+                      </td>
+                    </tr>
+                    <tr class="border-y border-[#e5e7eb]">
+                      <td
+                        class="pr-2 xl:px-5 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-normal text-nowrap tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                        40分
+                      </td>
+                      <td
+                        class="pl-2 xl:px-5 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                        ¥8,000
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="menu-price-table w-auto text-left">
+                  <tbody>
+                    <tr class="border-y border-[#e5e7eb]">
+                      <td
+                        class="pr-2 xl:px-5 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-normal text-nowrap tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle xl:min-w-[70px]">
+                        60分
+                      </td>
+                      <td
+                        class="pl-2 xl:px-5 text-[14px] lg:text-[20px] xl:text-[23px] font-medium min-w-[90px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                        ¥12,950
+                      </td>
+                    </tr>
+                    <tr class="border-y border-[#e5e7eb]">
+                      <td
+                        class="pr-2 xl:px-5 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-normal text-nowrap tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                        90分
+                      </td>
+                      <td
+                        class="pl-2 xl:px-5 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                        ¥17,900
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <div class="flex flex-col-reverse lg:flex-row items-center justify-center gap-6 lg:gap-10 xl:gap-20">
+          <div class="flex-1 flex justify-end items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                Foot Reflexology｜<br class="block lg:hidden">足つぼマッサージ・角質除去&ケア
+              </h3>
+              <h4
+                class="text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2">
+                足裏から生まれ変わる。<br>
+                角質オフ×ツボ刺激で、<br class="block lg:hidden">驚きの軽さと輝きを。
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                気になるザラつきをケアして、触れたくなるようなツルツルの足裏へ。
+                角質を整えた状態でマッサージを行うことで、ツボへの刺激がよりダイレクトに伝わり、デトックスを力強くサポートします。施術後は「足が軽くなった」という喜びと共に、たっぷりの水分補給で全身の浄化をお楽しみください。
+              </p>
+              <table class="menu-price-table w-auto text-left">
+                <tbody>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                      50分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] min-w-[90px] align-middle">
+                      ¥6,600
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="flex-1">
+            <img src="assets/images/body-balancing.webp" alt="pair-room01" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="w-full flex justify-center">
+    <img src="assets/images/active-line.webp" class="w-[32px] lg:w-[40px] xl:w-[45px]">
+  </div>
+  <section class="w-full relative pt-10 md:pt-10 lg:pt-28 xl:pt-0 pb-20 w-full text-center">
+    <div>
       <h2
-        class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-wide">
-        CONCEPT
+        class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-wide my-8 lg:my-20 xl:my-28">
+        FLOW
       </h2>
-      <div class="flex flex-col space-y-10 md:space-y-20 lg:space-y-36 xl:space-y-40">
-        <div class="flex flex-col">
-          <div class="flex flex-col-reverse lg:flex-row">
-            <div class="w-full lg:w-1/3 flex lg:justify-end lg:items-end px-5">
-              <div data-aos="fade-up" data-aos-duration="1500" class="flex flex-row gap-4 lg:-mr-[100px]">
-                <div
-                  class="text-[57px] lg:text-[70px] 2xl:text-[106px] font-semibold text-[#5bb2ca] opacity-75 leading-[1]">
-                  01</div>
-                <div class="flex flex-col gap-4">
-                  <h4
-                    class="text-[18px] md:text-[24px] lg:text-[30px] font-medium text-start leading-[1.8] text-[#2e2f34] tracking-[4px] lg:tracking-widest">
-                    五感を満たし、<br>心と身体を本来の輝き へ</h4>
-                  <p
-                    class="text-[14px] lg:text-[12px] xl:text-[16px] lg:text-[18px] font-regular text-start leading-[2] xl:leading-[2.4] text-[#2e2f34] tracking-wide">
-                    伝統のロミロミと極上ヘッドスパを、完全オー<br class="hidden lg:block">
-                    ルハンドで。肌に触れるリネンやオイルすべて<br class="hidden lg:block">
-                    にこだわり、深い休息を届けます。<br>
-                    型に捉われない「ONLYONE」の施術で、お客<br class="hidden lg:block">
-                    様一人ひとりの疲れに寄り添い、内側から溢れ<br class="hidden lg:block">
-                    る美しさを引き出します。
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div data-aos="fade-in" data-aos-duration="1500" class="relative w-full lg:w-2/3 pl-10 lg:pl-0">
-              <img src="assets/images/concept01.webp" class="hidden lg:block w-full h-auto">
-              <img src="assets/images/concept01-sp.webp" class="block lg:hidden w-full h-auto">
-              <div class="w-full">
-                <p
-                  class="text-[32px] lg:text-[80px] 2xl:text-[96px] font-bodoni font-regular text-[#6a3906] text-end lg:text-center opacity-75 -mt-[15px] lg:-mt-[50px]">
-                  Beauty & Relax
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <div class="flex flex-col lg:flex-row">
-            <div data-aos="fade-in" data-aos-duration="1500" class="relative w-full lg:w-2/3 pr-10 lg:pr-0">
-              <img src="assets/images/concept02.webp" class="hidden lg:block w-full h-auto">
-              <img src="assets/images/concept02-sp.webp" class="block lg:hidden w-full h-auto">
-              <div class="w-full">
-                <p
-                  class="text-[32px] lg:text-[80px] 2xl:text-[96px] font-bodoni font-regular leading-[1] lg:leading-[1.2] text-[#6a3906] text-start lg:text-center opacity-75 -mt-[20px] lg:-mt-[50px]">
-                  Professional<br>　　　　Technique
-                </p>
-              </div>
-            </div>
-            <div class="w-full lg:w-1/3 flex justify-start px-5">
-              <div data-aos="fade-up" data-aos-duration="1500"
-                class="flex flex-row gap-4 lg:-ml-[100px] mt-4 lg:mt-[200px]">
-                <div
-                  class="text-[57px] lg:text-[70px] 2xl:text-[106px] font-semibold text-[#5bb2ca] opacity-75 leading-[1]">
-                  02</div>
-                <div class="flex flex-col gap-4">
-                  <h4
-                    class="text-[18px] md:text-[24px] lg:text-[30px] font-medium text-start leading-[1.8] text-[#2e2f34] tracking-[8px] lg:tracking-widest">
-                    確かなライセンスが裏付ける、<br>心に届く手技
-                  </h4>
-                  <p
-                    class="text-[14px] lg:text-[12px] xl:text-[16px] lg:text-[18px] font-regular text-start leading-[2] xl:leading-[2.4] text-[#2e2f34] tracking-wide">
-                    I.T.U.認定ライセンスを持つ経験豊富なセラピ<br>ストが、機械では成し得ない繊細なタッチで心<br>身を解きほぐします。<br>
-                    確かな技術に真心を添えた接客で、日々のハー<br>ドワークで強張った身体と心を、芯から解放し、<br>至福の充足感で満たします。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <div class="flex lg:flex-row flex-col-reverse">
-            <div class="w-full lg:w-1/3 flex justify-end items-end px-5">
-              <div data-aos="fade-up" data-aos-duration="1500" class="flex flex-row gap-4 lg:-mr-[100px]">
-                <div
-                  class="text-[57px] lg:text-[70px] 2xl:text-[106px] font-semibold text-[#5bb2ca] opacity-75 leading-[1]">
-                  03</div>
-                <div class="flex flex-col gap-4">
-                  <h4
-                    class="text-[18px] md:text-[24px] lg:text-[30px] font-medium text-start leading-[1.8] text-[#2e2f34] tracking-[8px] lg:tracking-widest">
-                    都会の喧騒を忘れ、<br>リゾートの静寂に浸る
-                  </h4>
-                  <p
-                    class="text-[14px] lg:text-[12px] xl:text-[16px] lg:text-[18px] font-regular text-start leading-[2] xl:leading-[2.4] text-[#2e2f34] tracking-wide">
-                    完全個室のプライベート空間には、ペアルーム<br class="hidden lg:block">やシャワー、パウダースペースを完備。日常を<br
-                      class="hidden lg:block">切り離した非日常のなかで、あたたかな接客と<br class="hidden lg:block">極上の癒しに包まれます。<br>
-                    あなただけのために設えられた贅沢な空間で、<br class="hidden lg:block">心ゆくまで「自分を労わる時間」をお過ごしく<br
-                      class="hidden lg:block">ださい。
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div data-aos="fade-in" data-aos-duration="1500" class="relative w-full lg:w-2/3 pl-10 lg:pl-0">
-              <img src="assets/images/concept03.webp" class="hidden lg:block w-full h-auto">
-              <img src="assets/images/concept03-sp.webp" class="block lg:hidden w-full h-auto">
-              <div class="w-full">
-                <p
-                  class="text-[32px] lg:text-[80px] 2xl:text-[96px] font-bodoni font-regular text-[#6a3906] text-end lg:text-center opacity-75 -mt-[20px] lg:-mt-[50px]">
-                  Private Space
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-  <section class="w-full relative">
-    <div class="w-full flex flex-col justify-center items-end mx-auto h-full bg-cover bg-center">
-      <div id="room"
-        class="relative w-full h-[125vh] lg:h-[100vh] bg-[url('assets/images/top-room.webp')] bg-cover bg-center bg-fixed px-4 md:px-48 lg:px-40 2xl:px-64">
-        <div class="flex justify-start items-center w-full h-full">
-          <div data-aos="fade-up" data-aos-duration="1500" class="max-w-[480px] text-start px-4">
-            <h2
-              class="mb-8 xl:mb-2 text-white text-[28px] lg:text-[40px] xl:text-[50px] font-bodoni font-medium tracking-wide">
-              ROOM</h2>
-            <p class="text-white text-[14px] md:text-[18px] leading-[2.2] font-light mb-16">
-              都会の喧騒を離れ、たどり着くのは五感が潤うリゾートの静寂。完全個室のプライベート空間には、肌に触れるリネンから香りまで、店主のこだわりが息づいています。<br>
-              ペアルームやシャワー、パウダースペースも完備。誰にも邪魔されない「あなただけの贅沢な時間」を、温かなおもてなしと共に心ゆくまでお過ごしください。
-            </p>
-            <a href="#"
-              class="flex w-fit items-center relative px-8 xl:px-10 py-2 lg:py-3 xl:py-4 border border-white/60 text-white font-light tracking-[4px] lg:tracking-[4px] xl:tracking-[10px] text-[14px] lg:text-[16px] xl:text-[18px] transition hover:bg-white/60 hover:text-[#244A6E]">
-              ReadMore
-              <div class="absolute right-0 translate-x-1/2">
-                <div class="relative w-[45px] lg:w-[54px] xl:w-[60px] h-[1px] bg-white/60">
-                  <div class="flex items-start w-1/2 h-[1px] absolute right-0 translate-x-1/2 rotate-[30deg]">
-                    <div class="w-1/2 h-full bg-white/60">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
+    <div class="max-w-[900px] mx-auto flex flex-col gap-[75px] lg:gap-20 xl:gap-24">
+      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-20 py-4">
+        <div class="flex-1 px-7 lg:px-0">
+          <div class="flex items-center mb-8">
+            <span class="text-[#69b3da] font-bold text-[22px] lg:text-[26px] xl:text-[33px] mr-4 leading-none">01</span>
+            <span
+              class="text-[#2e2f34] font-normal text-[18px] lg:text-[20px] xl:text-[30px] tracking-wide">ウェルカムサービス</span>
           </div>
-        </div>
-      </div>
-      <div id="menu"
-        class="relative w-full h-[125vh] lg:h-[100vh] bg-[url('assets/images/top-menu.webp')] bg-cover bg-center bg-fixed px-4 md:px-48 lg:px-40 2xl:px-64">
-        <div class="flex justify-start items-center w-full h-full">
-          <div data-aos="fade-up" data-aos-duration="1500" class="max-w-[480px] text-start px-4">
-            <h2
-              class="mb-8 xl:mb-2 text-white text-[28px] lg:text-[40px] xl:text-[50px] font-bodoni font-medium tracking-wide">
-              MENU</h2>
-            <p class="text-white text-[14px] md:text-[18px] leading-[2.2] font-light mb-16">
-              伝統のロミロミと極上ヘッドスパを軸に、全身の強張りをオールハンドで丁寧に解きほぐします。最大の特徴は、お客様の状態に合わせ施術を組み立てる「ON LYONE」のホスピタリティ。<br>
-              決まった型に捉われず、お疲れの箇所に深く届く最適なアプローチで、日々のハードワークから解放される至福のひとときを。<br><br>
-              BODY ｜ HEAD ｜ FACIAL
-            </p>
-            <a href="#"
-              class="flex w-fit items-center relative px-8 xl:px-10 py-2 lg:py-3 xl:py-4 border border-white/60 text-white font-light tracking-[4px] lg:tracking-[4px] xl:tracking-[10px] text-[14px] lg:text-[16px] xl:text-[18px] transition hover:bg-white/60 hover:text-[#244A6E]">
-              ReadMore
-              <div class="absolute right-0 translate-x-1/2">
-                <div class="relative w-[45px] lg:w-[54px] xl:w-[60px] h-[1px] bg-white/60">
-                  <div class="flex items-start w-1/2 h-[1px] absolute right-0 translate-x-1/2 rotate-[30deg]">
-                    <div class="w-1/2 h-full bg-white/60">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="item"
-        class="relative w-full h-[125vh] lg:h-[100vh] bg-[url('assets/images/top-item.webp')] bg-cover bg-center bg-fixed px-4 md:px-48 lg:px-40 2xl:px-64">
-        <div class="flex justify-start items-center w-full h-full">
-          <div data-aos="fade-up" data-aos-duration="1500" class="max-w-[480px] text-start px-4">
-            <h2
-              class="mb-8 xl:mb-2 text-white text-[28px] lg:text-[40px] xl:text-[50px] font-bodoni font-medium tracking-wide">
-              ITEM</h2>
-            <p class="text-white text-[14px] md:text-[18px] leading-[2.2] font-light mb-16">
-              「B e a u t y & R e l a x 」を叶えるため、お肌に触れるすべての製品を厳選。天然由来のオーガニックオイルをはじめ、高い美容効果と芳醇な香りを併せ持つ逸品のみを使用しています。<br>
-              熟練の手技と上質なアイテムが融合することで、施術後の肌は輝き、心は深い充足感に包まれる。細部にまで宿るこだわりをご体感ください。
-            </p>
-            <a href="#"
-              class="flex w-fit items-center relative px-8 xl:px-10 py-2 lg:py-3 xl:py-4 border border-white/60 text-white font-light tracking-[4px] lg:tracking-[4px] xl:tracking-[10px] text-[14px] lg:text-[16px] xl:text-[18px] transition hover:bg-white/60 hover:text-[#244A6E]">
-              ReadMore
-              <div class="absolute right-0 translate-x-1/2">
-                <div class="relative w-[45px] lg:w-[54px] xl:w-[60px] h-[1px] bg-white/60">
-                  <div class="flex items-start w-1/2 h-[1px] absolute right-0 translate-x-1/2 rotate-[30deg]">
-                    <div class="w-1/2 h-full bg-white/60">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ...rest of content remains unchanged -->
-  <section class="w-full">
-    <div class="w-full flex flex-col justify-center items-end mx-auto h-full bg-cover bg-center">
-      <video autoplay muted loop playsinline preload="metadata">
-        <source src="assets/videos/sea-vd.mp4" type="video/mp4">
-      </video>
-    </div>
-  </section>
-  <section id="access" class="w-full">
-    <div
-      class="relative w-full h-[100vh] bg-[url('assets/images/top-access.webp')] bg-cover bg-center px-4 md:px-48 lg:px-40 2xl:px-64">
-      <div data-aos="fade-up" data-aos-duration="1500" class="flex lg:justify-end items-center w-full h-full">
-        <div data-aos="fade-up" data-aos-duration="1500" class="max-w-[480px] text-start px-4">
-          <h2
-            class="mb-8 xl:mb-2 text-white text-[28px] lg:text-[40px] xl:text-[50px] font-bodoni font-medium tracking-wide">
-            ACCESS</h2>
-          <p class="text-white text-[14px] md:text-[18px] leading-[2.2] font-light mb-16">
-            〒5 3 0 - 0 0 0 5<br>
-            大阪府大阪市北区中之島3 - 1 - 2<br>
-            国立国際美術館付近<br>
-            京阪中之島線 渡辺橋駅から徒歩4 分<br>
-            大阪メトロ四ツ橋線 肥後橋駅から徒歩約4 分<br>
-            0 6 - 6 4 4 1 - 3 9 3 9<br>
-            営業時間 9 : 0 0 ～ 2 2 : 0 0 （ 不定休）
+          <p class="text-[#2e2f34] text-start text-[14px] text-[16px] xl:text-[18px] font-normal leading-relaxed mb-1">
+            まずは温かいお飲み物で、日常の忙しさをリセット。
+          </p>
+          <p class="text-[#2e2f34] text-start text-[14px] text-[16px] xl:text-[18px] font-normal leading-relaxed">
+            ホッと一息つくことから、至福の時間が始まります。
           </p>
         </div>
-      </div>
-    </div>
-  </section>
-  <section id="map" class="w-full py-20 xl:py-32 px-8 lg:px-16 xl:px-[100px]">
-    <div class="w-full flex flex-col lg:flex-row justify-center gap-[50px] lg:gap-[60px] xl:gap-[70px] mx-auto">
-      <div class="xl:w-1/2 w-full h-auto flex flex-col gap-4 md:gap-8 lg:gap-12 xl:gap-16">
-        <h3 class="text-[28px] lg:text-[36px] xl:text-[50px] font-medium text-center text-[#2e2f34] tracking-wide">MAP
-        </h3>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1159.826206969088!2d135.49368189751226!3d34.69297282496576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e7832b0a448f%3A0x2d3ad9b264ea099!2zTlNQQSjjgqjjg4zjgrnjg5Ep!5e0!3m2!1sja!2sjp!4v1563353079709!5m2!1sja!2sjp"
-          class="w-full aspect-[3/2]" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-      </div>
-      <div class="xl:w-1/2 w-full h-auto flex flex-col gap-4 md:gap-8 lg:gap-12 xl:gap-16">
-        <h3 class="text-[28px] lg:text-[36px] xl:text-[50px] font-medium text-center text-[#2e2f34] tracking-wide">360℃
-          CAMERA</h3>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1563349773095!6m8!1m7!1sCAoSLEFGMVFpcE95dE9LcFVtdXdpNm8zUlV2MTZUdnYwZWxHZ0htVWxZaXRMS0Jo!2m2!1d34.691528530939!2d135.49288357426!3f100!4f0!5f0.7820865974627469"
-          class="w-full aspect-[3/2]" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-      </div>
-    </div>
-  </section>
-  <section class="w-full py-32">
-    <div class="w-full flex flex-col justify-center items-end mx-auto h-full bg-cover bg-center">
-      <div class="w-full relative pb-36 lg:pb-28 xl:pb-20">
-        <div class="relative flex w-full justify-center items-center lg:justify-start lg:items-start">
-          <img src="assets/images/text-R.nSPA.webp" class="max-w-[80vw] lg:max-w-[40vw] w-full h-auto">
-          <h3
-            class="w-full absolute -top-1 lg:top-1/2 left-1/2 translate-y-full lg:-translate-y-1/2 -translate-x-1/2 text-[28px] lg:text-[40px] xl:text-[50px] font-bodoni text-center font-regular">
-            VOICE & MOMENTS
-          </h3>
+        <div class="flex-shrink-0 w-full lg:w-[260px] xl:w-[350px]">
+          <img src="assets/images/welcome-service.webp" alt="ウェルカムサービス お茶" class="rounded w-full h-auto object-cover">
         </div>
-        <p class="block lg:hidden text-black w-full text-[18px] font-bodoni text-center font-regular pt-12">
-          VOICE | <span class="text-[#b3b3b3]">MOMENTS</span>
+      </div>
+      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-20 py-4">
+        <div class="flex-1 px-7 lg:px-0">
+          <div class="flex items-center mb-8">
+            <span class="text-[#69b3da] font-bold text-[22px] lg:text-[26px] xl:text-[33px] mr-4 leading-none">02</span>
+            <span
+              class="text-[#2e2f34] font-normal text-[18px] lg:text-[20px] xl:text-[30px] tracking-wide">カルテご記入</span>
+          </div>
+          <p class="text-[#2e2f34] text-start text-[14px] text-[16px] xl:text-[18px] font-normal leading-relaxed mb-1">
+            お疲れの場所や心の状態をお聞かせください。
+          </p>
+          <p class="text-[#2e2f34] text-start text-[14px] text-[16px] xl:text-[18px] font-normal leading-relaxed">
+            お一人おひとりに寄り添うケアのための、大切な対話の時間です。
+          </p>
+        </div>
+        <div class="flex-shrink-0 w-full lg:w-[260px] xl:w-[350px]">
+          <img src="assets/images/medical-record.webp" alt="カルテご記入" class="rounded w-full h-auto object-cover">
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-20 py-4">
+        <div class="flex-1 px-7 lg:px-0">
+          <div class="flex items-start mb-4">
+            <span
+              class="text-[#69b3da] font-bold text-[22px] lg:text-[26px] xl:text-[33px] mr-4 lg:py-2 leading-none">03</span>
+            <span
+              class="text-[#2e2f34] font-normal text-start text-[18px] lg:text-[20px] xl:text-[30px] tracking-wide">深呼吸AROMAの<br>香りをチョイス</span>
+          </div>
+          <p class="text-[#2e2f34] text-start text-[14px] text-[16px] xl:text-[18px] font-normal leading-relaxed mb-1">
+            直感で選ぶ一滴が、今のあなたが必要としている香り。
+          </p>
+          <p class="text-[#2e2f34] text-start text-[14px] text-[16px] xl:text-[18px] font-normal leading-relaxed">
+            深く息を吸い込み、心身を解き放つ準備を整えます。
+          </p>
+        </div>
+        <div class="flex-shrink-0 w-full lg:w-[260px] xl:w-[350px]">
+          <img src="assets/images/deep-breathe.webp" alt="深呼吸AROMAの香りをチョイス" class="rounded w-full h-auto object-cover">
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-20 py-4">
+        <div class="flex-1 px-7 lg:px-0">
+          <div class="flex items-start mb-4">
+            <span
+              class="text-[#69b3da] font-bold text-[22px] lg:text-[26px] xl:text-[33px] mr-4 lg:py-2 leading-none">04</span>
+            <span
+              class="text-[#2e2f34] font-normal text-start text-[18px] lg:text-[20px] xl:text-[30px] tracking-wide">その日の疲れに応じた<br>マッサージ</span>
+          </div>
+          <p class="text-[#2e2f34] text-start text-[14px] text-[16px] xl:text-[18px] font-normal leading-relaxed mb-1">
+            お体の声に耳を傾け、最適な圧とリズムで丁寧に。
+          </p>
+          <p class="text-[#2e2f34] text-start text-[14px] text-[16px] xl:text-[18px] font-normal leading-relaxed">
+            凝り固まった緊張を、深い心地よさの中へ溶かしていきます。
+          </p>
+        </div>
+        <div class="flex-shrink-0 w-full lg:w-[260px] xl:w-[350px]">
+          <img src="assets/images/day-masssage.webp" alt="その日の疲れに応じたマッサージ" class="rounded w-full h-auto object-cover">
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-20 py-4">
+        <div class="flex-1 px-7 lg:px-0">
+          <div class="flex items-center mb-4 xl:mb-8">
+            <span class="text-[#69b3da] font-bold text-[22px] lg:text-[26px] xl:text-[33px] mr-4 leading-none">05</span>
+            <span
+              class="text-[#2e2f34] font-normal text-[18px] lg:text-[20px] xl:text-[30px] tracking-wide">支度/お会計</span>
+          </div>
+          <p class="text-[#2e2f34] text-start text-[14px] text-[16px] xl:text-[18px] font-normal leading-relaxed mb-1">
+            施術後の余韻を感じながら、ゆっくりとお支度を。
+          </p>
+          <p class="text-[#2e2f34] text-start text-[14px] text-[16px] xl:text-[18px] font-normal leading-relaxed">
+            最後はお見送りまで、穏やかな温もりが続くように。
+          </p>
+        </div>
+        <div class="flex-shrink-0 w-full lg:w-[260px] xl:w-[350px]">
+          <img src="assets/images/payment.webp" alt="支度/お会計" class="rounded w-full h-auto object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="w-full flex justify-center mb-12 lg:mb-20 xl:mb-28 xl:mt-6">
+      <img src="assets/images/active-line.webp" class="w-[32px] lg:w-[40px] xl:w-[45px]">
+    </div>
+  </section>
+  <section class="w-full relative pt-10 md:pt-10 lg:pt-28 xl:pt-0 pb-20 w-full text-center">
+    <div class="w-full flex flex-col gap-16 lg:gap-20 xl:gap-24">
+      <div>
+        <nav
+          class="w-full flex flex-col lg:flex-row justify-center items-center gap-2 md:gap-4 lg:gap-6 xl:gap-8 xl:py-4">
+          <ul
+            class="max-w-[280px] lg:max-w-full w-full lg:w-auto flex flex-row items-center gap-7 md:gap-4 lg:gap-6 xl:gap-8 text-[14px] lg:text-[16px] xl:text-[20px] font-bodoni font-regular tracking-wide text-[#2e2f34]">
+            <a href="#private-room" class="w-full block text-end text-nowrap hover:underline">BODY</a>
+            <li class="mx-1 lg:mx-3 xl:mx-6">|</li>
+            <a href="#pair-room" class="w-full block text-center text-nowrap hover:underline">HEAD</a>
+            <li class="mx-1 lg:mx-3 xl:mx-6">|</li>
+            <a href="#pair-room" class="w-full block text-center text-nowrap hover:underline">FACIAL</a>
+          </ul>
+        </nav>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <h2
+          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-wide mb-4 lg:mb-5 xl:mb-6">
+          HEAD
+        </h2>
+        <p
+          class="text-start lg:text-center text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-[#2e2f34] tracking-wide leading-[2] mb-14 lg:mb-32 xl:mb-40 px-8">
+          温かなスチームと手技で、頭皮のこわばりをリセット。<br>
+          夢心地のまどろみの中で、深い休息と爽快感を。
         </p>
-      </div>
-      <div class="w-full lg:px-40 2xl:px-[280px] pb-20">
-        <div class="w-full relative mx-auto">
-          <button
-            class="testimonial-button-next hidden lg:block absolute z-30 top-1/2 right-0 translate-x-1/2 -translate-y-1/2 !text-gray-700 w-[40px] aspect-[1] text-[20px] border-[2px] rounded-full border-gray-200 bg-white">
-            <i class="fa-solid fa-angle-right"></i>
-          </button>
-          <button
-            class="testimonial-button-prev hidden lg:block absolute z-30 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 !text-gray-700 w-[40px] aspect-[1] text-[20px] border-[2px] rounded-full border-gray-200 bg-white">
-            <i class="fa-solid fa-angle-left"></i>
-          </button>
-          <div class="w-full swiper swiper-testimonial relative">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide border-[2px] bg-white/80 border-gray-200 rounded-[20px] p-4">
-                <div class="flex flex-col gap-4 py-20">
-                  <p class="text-[40px] text-gray-500 text-center leading-relaxed">
-                    1
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide border-[2px] bg-white/80 border-gray-200 rounded-[20px] p-4">
-                <div class="flex flex-col gap-4 py-20">
-                  <p class="text-[40px] text-gray-500 text-center leading-relaxed">
-                    2
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide border-[2px] bg-white/80 border-gray-200 rounded-[20px] p-4">
-                <div class="flex flex-col gap-4 py-20">
-                  <p class="text-[40px] text-gray-500 text-center leading-relaxed">
-                    3
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide border-[2px] bg-white/80 border-gray-200 rounded-[20px] p-4">
-                <div class="flex flex-col gap-4 py-20">
-                  <p class="text-[40px] text-gray-500 text-center leading-relaxed">
-                    4
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide border-[2px] bg-white/80 border-gray-200 rounded-[20px] p-4">
-                <div class="flex flex-col gap-4 py-20">
-                  <p class="text-[40px] text-gray-500 text-center leading-relaxed">
-                    5
-                  </p>
-                </div>
-              </div>
+        <div class="flex flex-col-reverse lg:flex-row items-center justify-center gap-6 lg:gap-10 xl:gap-20">
+          <div class="flex-1 flex justify-end items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                STEAM HEA DSPA｜<br class="block lg:hidden">スチームヘッドスパ
+              </h3>
+              <h4
+                class="text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2  mb-4 xl:mb-8">
+                髪に輝き、脳に休息を。
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.3] tracking-wide mb-4 xl:mb-8">
+                バリ島伝統の「クリームバス」にスチームを融合させ、髪の芯まで潤いを届けながら「無の状態」へと導く極上の癒し。アロマの香りに包まれる手技が、頭皮のコリや顔のむくみ、目元の疲労をスッキリと解消します。
+              </p>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.3] tracking-wide mb-4 xl:mb-8">
+                さらに首・肩・デコルテまで丁寧にケアすることで、ロミロミとの相乗効果により上半身が嘘のように軽くなるのを実感いただけるはずです。
+              </p>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.3] tracking-wide mb-4 xl:mb-8">
+                ※セルフシャワー制となります。身支度のお時間を含め、予約終了5分前に施術を終了させていただきます。
+              </p>
             </div>
+          </div>
+          <div class="flex-1">
+            <img src="assets/images/body-balancing.webp" alt="body-balancing" class="w-full h-auto">
+          </div>
+        </div>
+        <div>
+          <div class="w-full mx-auto mt-10 lg:pl-[15%]">
+            <table class="menu-price-table w-auto text-left mx-8 lg:mx-0">
+              <tbody>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                    60分
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] min-w-[90px] align-middle">
+                    ¥7,980
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                    初回体験</td>
+                </tr>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    60分
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    ¥10,000
+
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                    ２回目以降の方</td>
+                </tr>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    70分
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    ¥11,550
+
+                  </td>
+                  <td></td>
+                </tr>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    80分 </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    ¥13,040
+
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                    頭皮スクラブ・ボディスクラブ無料</td>
+                </tr>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    90分
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    ¥14,490
+
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                    頭皮スクラブ・ボディスクラブ無料・お腕、手こり退治</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <div class="flex flex-col lg:flex-row items-start justify-center gap-6 lg:gap-16 xl:gap-20">
+          <div class="flex-1">
+            <img src="assets/images/dry-head-spa.webp" alt="pair-room01" class="w-full h-auto">
+          </div>
+          <div class="w-full lg:w-auto flex-1 flex justify-start items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                DRY HEAD SPA｜<br class="block lg:hidden">ドライヘッドスパ
+              </h3>
+              <h4
+                class="text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2">
+                微睡みのなか、脳を洗う。<br>
+                ミリ単位の技術でほどける極上ヘッドスパ
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                水やオイルを一切使わず、頭皮をミリ単位で捉えてゆっくりと引き上げる独自の手法。それは単なる睡眠を超えた、まさに「脳のクリーニング」と呼ぶにふさわしい贅沢な体験です。洗い流し不要
+              </p>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                仕上げには、頭皮専用の炭酸スキンケアで潤いを凝縮。洗い流しは不要ですので、お着替えの手間もなく、そのままのスタイルで至福のひとときをお楽しみいただけます。
+              </p>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                ※顔ツボマッサージを含みます。
+              </p>
+              <table class="menu-price-table w-auto text-left">
+                <tbody>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                      45分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] min-w-[90px] align-middle">
+                      ¥4,510
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                      初回体験</td>
+                  </tr>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      45分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      ¥4,980
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:pl-7 text-[14px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] font-light pl-3 align-middle">
+                      ２回目以降の方</td>
+                  </tr>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      60分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      ¥6,180
+                    </td>
+                  </tr>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      90分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      ¥13,680
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <div class="flex flex-col-reverse lg:flex-row items-start justify-center gap-6 lg:gap-16 xl:gap-20">
+          <div class="flex-1 flex justify-end items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                FACE & HEAD｜<br class="block lg:hidden">フェイス＆ヘッド
+              </h3>
+              <h4
+                class="text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2">
+                顔と頭をほどく至福。<br>
+                境目のない癒やしで夢心地の休息を。
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                手や指、足先の巡りをよくすることは全身の巡りをよくすると言われております。緊張をほぐす為に先に指先足先の巡りを整え、お顔のトリートメントと頭のトリートメントを行なってまいります。暖かいスチームをかけながら、境目なくトリートメントいたしますので、トリートメント中は夢心地良さへと包まれます。
+              </p>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                お顔も頭も艶々スッキリした状態は明日への活力に。おかえりの際シャワーも浴びていただけます。デトックスや日々の疲れから解消される、当店ならではのイチオシのコースです。
+              </p>
+              <table class="menu-price-table w-auto text-left ">
+                <tbody>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                      60分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] min-w-[90px] align-middle">
+                      ¥14,520
+                    </td>
+                  </tr>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                      100分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] min-w-[90px] align-middle">
+                      ¥24,200
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="flex-1">
+            <img src="assets/images/body-balancing.webp" alt="pair-room01" class="w-full h-auto">
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section id="qa" class="bg-[#f9f6f3] py-[50px] lg:py-20 xl:py-32">
-    <div class="flex flex-col justify-center items-center">
-      <h3
-        class="text-[24px] lg:text-[36px] xl:text-[45px] font-medium text-center text-[#2e2f34] tracking-wide pb-6 lg:py-10 xl:pb-[60px]">
-        Q&A
-      </h3>
-      <section class="accordion w-full max-w-[890px] flex flex-col gap-6 md:gap-8 lg:gap-10 xl:gap-10 px-8">
-        <div class="tab relative">
-          <input class="absolute opacity-0 -z-10" type="radio" name="accordion-2" id="rd1" checked>
-          <label for="rd1" class="tab__label flex items-center text-[14px] lg:text-[16px] xl:text-[18px]">
-            <span class="flex justify-center items-center gap-2 lg:gap-3 xl:gap-4">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">Q</span>
-              トリートメントメニューが決まらない？わからない？
-            </span>
-            <span
-              class="text-[14px] lg:text-[16px] xl:text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator !font-sans !font-medium">ー</span>
-              <span class="collapsed-indicator">+</span>
-            </span>
-          </label>
-          <div class="tab__content pl-5 pr-16 bg-white">
-            <div
-              class="!px-0 flex flex-col gap-2 lg:gap-3 xl:gap-4 border-t border-black/50 py-4 text-[14px] lg:text-[16px] xl:text-[18px] leading-relaxed">
-              <div class="flex items-center gap-4">
-                <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
-                <span>
-                  トリートメントメニューが決まらない？わからない？
-                </span>
-              </div>
+  <section>
+    <div class="w-full flex justify-center mb-12 lg:mb-20 xl:mb-32">
+      <img src="assets/images/active-line.webp" class="w-[32px] lg:w-[40px] xl:w-[45px]">
+    </div>
+  </section>
+  <section class="w-full relative pt-10 md:pt-10 lg:pt-28 xl:pt-0 pb-20 w-full text-center">
+    <div class="w-full flex flex-col gap-16 lg:gap-20 xl:gap-24">
+      <div>
+        <nav
+          class="w-full flex flex-col lg:flex-row justify-center items-center gap-2 md:gap-4 lg:gap-6 xl:gap-8 xl:py-4">
+          <ul
+            class="max-w-[280px] lg:max-w-full w-full lg:w-auto flex flex-row items-center gap-7 md:gap-4 lg:gap-6 xl:gap-8 text-[14px] lg:text-[16px] xl:text-[20px] font-bodoni font-regular tracking-wide text-[#2e2f34]">
+            <a href="#private-room" class="w-full block text-end text-nowrap hover:underline">BODY</a>
+            <li class="mx-1 lg:mx-3 xl:mx-6">|</li>
+            <a href="#pair-room" class="w-full block text-center text-nowrap hover:underline">HEAD</a>
+            <li class="mx-1 lg:mx-3 xl:mx-6">|</li>
+            <a href="#pair-room" class="w-full block text-center text-nowrap hover:underline">FACIAL</a>
+          </ul>
+        </nav>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <h2
+          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-wide mb-4 lg:mb-5 xl:mb-6">
+          FACIAL
+        </h2>
+        <p
+          class="text-start lg:text-center text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-[#2e2f34] tracking-wide leading-[2] mb-14 lg:mb-32 xl:mb-40 px-8">
+          手技と天然石の力で凝り固まった肌を深く癒やし、本来の輝きへ。<br>
+          エイジングケアを叶え、艶やかで凛とした印象に。
+        </p>
+        <div class="flex flex-col-reverse lg:flex-row items-center justify-center gap-6 lg:gap-10 xl:gap-20">
+          <div class="flex-1 flex justify-end items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                SPA FACIAL｜<br class="block lg:hidden">スパ フェイシャル
+              </h3>
+              <h4
+                class="text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2  mb-4 xl:mb-8">
+                波のようなリズムで。<br>
+                優しさと大胆さが織りなす極上の癒やし。
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.3] tracking-wide mb-4 xl:mb-8">
+                包み込むような優しさと、力強い大胆さを兼ね備えた「波」のようなリズムが特徴のフェイシャルです。まずは泡パックでお肌をクリアに整え、丁寧にクレンジング。
+              </p>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.3] tracking-wide mb-4 xl:mb-8">
+                スキンケアまでしっかり行います。お顔だけでなく、首や肩の疲れも重点的にほぐすため、深い癒やしを求める方に最適です。デコルテや腕まで含む、充実のケアをご体験ください。
+              </p>
+            </div>
+          </div>
+          <div class="flex-1">
+            <img src="assets/images/body-balancing.webp" alt="body-balancing" class="w-full h-auto">
+          </div>
+        </div>
+        <div>
+          <div class="w-full mx-auto mt-10 lg:pl-[15%]">
+            <table class="menu-price-table w-auto text-left mx-8 lg:mx-0">
+              <tbody>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                    40分
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] min-w-[90px] align-middle">
+                    ¥8,800
+                  </td>
+                </tr>
+                <tr class="border-y border-[#e5e7eb]">
+                  <td
+                    class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    60分
+                  </td>
+                  <td
+                    class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                    ¥11,000
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <div class="flex flex-col lg:flex-row items-start justify-center gap-6 lg:gap-16 xl:gap-20">
+          <div class="flex-1">
+            <img src="assets/images/dry-head-spa.webp" alt="pair-room01" class="w-full h-auto">
+          </div>
+          <div class="w-full lg:w-auto flex-1 flex justify-start items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                RoseQuartz Mushroom＆GUASHA｜<br class="block lg:hidden">ローズマッシュ＆グアシャ
+              </h3>
+              <h4
+                class="text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2">
+                天然石の温もりに包まれ、<br>
+                肌と魂を解き放つ至福のひととき。
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                手や指、足先の巡りをよくすることは全身の巡りをよくすると言われております。緊張をほぐす為に先に指先足先の巡りを整え、お顔のトリートメントと頭のトリートメントを行なってまいります。暖かいスチームをかけながら、境目なくトリートメントいたしますので、トリートメント中は夢心地良さへと包まれます。
+              </p>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                お顔も頭も艶々スッキリした状態は明日への活力に。おかえりの際シャワーも浴びていただけます。デトックスや日々の疲れから解消される、当店ならではのイチオシのコースです。
+              </p>
+              <table class="menu-price-table w-auto text-left">
+                <tbody>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                      60分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] min-w-[90px] align-middle">
+                      ¥14,520
+                    </td>
+                  </tr>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      100分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      ¥24,200
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-        <div class="tab relative">
-          <input class="absolute opacity-0 -z-10" type="radio" name="accordion-2" id="rd2">
-          <label for="rd2" class="tab__label flex items-center text-[14px] lg:text-[16px] xl:text-[18px]">
-            <span class="flex justify-center items-center gap-2 lg:gap-3 xl:gap-4">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">Q</span>
-              トリートメントメニューが決まらない？わからない？
-            </span>
-            <span
-              class="text-[14px] lg:text-[16px] xl:text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator !font-sans !font-medium">ー</span>
-              <span class="collapsed-indicator">+</span>
-            </span>
-          </label>
-          <div class="tab__content pl-5 pr-16 bg-white">
-            <p
-              class="!px-0 flex justify-start items-center gap-2 lg:gap-3 xl:gap-4 border-t text-[14px] lg:text-[16px] xl:text-[18px] border-black/50">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
-              セラピストが電話にてカウンセリングいたします。<br>
-            </p>
+      </div>
+      <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-12">
+        <div class="flex flex-col-reverse lg:flex-row items-start justify-center gap-6 lg:gap-16 xl:gap-20">
+          <div class="flex-1 flex justify-end items-center">
+            <div class="w-full lg:w-[70%] px-8 lg:px-0">
+              <h3
+                class="text-[18px] md:text-[24px] lg:text-[28px] xl:text-[30px] font-regular text-start text-[#2e2f34] tracking-wide mb-2 lg:mb-2 xl:mb-2">
+                RoseQuartz<br class="block lg:hidden"> Mushroom＆GUASHA｜<br>ローズマッシュ＆グアシャ
+              </h3>
+              <h4
+                class="text-[16px] lg:text-[20px] xl:text-[25px] font-regular text-start text-[#2e2f34] leading-[1.8] tracking-wide mb-8 lg:mb-4 xl:mb-2">
+                天然石の温もりに包まれ、<br>
+                肌と魂を解き放つ至福のひととき。
+              </h4>
+              <p
+                class="text-[14px] lg:text-[16px] xl:text-[18px] font-regular text-start text-[#2e2f34] leading-[2.5] tracking-wide my-4 lg:my-5 xl:my-5">
+                天然のローズクォーツクリスタルを用いた、肌と魂を癒やすトリートメント。心地よい刺激で肌を解きほぐし、エイジングケアをしながら健やかな状態へと整えます。日々の疲れを忘れ、明るく澄んだ表情へ。
+              </p>
+              <table class="menu-price-table w-auto text-left">
+                <tbody>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal min-w-[70px] tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] align-middle">
+                      40分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px] min-w-[90px] align-middle">
+                      ¥8,800
+                    </td>
+                  </tr>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      50分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      ¥9,500
+                    </td>
+                  </tr>
+                  <tr class="border-y border-[#e5e7eb]">
+                    <td
+                      class="px-2 lg:px-4 xl:pr-7 text-[14px] lg:text-[16px] xl:text-[18px] text-nowrap text-[#2e2f34] font-normal tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      60分
+                    </td>
+                    <td
+                      class="px-2 lg:px-4 xl:px-7 text-[14px] lg:text-[20px] xl:text-[23px] font-medium tracking-[3px] lg:tracking-[4px] xl:tracking-[6px]">
+                      ¥11,000
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="flex-1">
+            <img src="assets/images/body-balancing.webp" alt="pair-room01" class="w-full h-auto">
           </div>
         </div>
-        <div class="tab relative">
-          <input class="absolute opacity-0 -z-10" type="radio" name="accordion-2" id="rd3">
-          <label for="rd3" class="tab__label flex items-center text-[14px] lg:text-[16px] xl:text-[18px]">
-            <span class="flex justify-center items-center gap-2 lg:gap-3 xl:gap-4">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">Q</span>
-              授乳中はトリートメントできますか？
-            </span>
-            <span
-              class="text-[14px] lg:text-[16px] xl:text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator !font-sans !font-medium">ー</span>
-              <span class="collapsed-indicator">+</span>
-            </span>
-          </label>
-          <div class="tab__content pl-5 pr-16 bg-white">
-            <p
-              class="!px-0 flex justify-start items-center gap-2 lg:gap-3 xl:gap-4 border-t text-[14px] lg:text-[16px] xl:text-[18px] border-black/50">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
-              授乳中はトリートメントできますか？
-            </p>
-          </div>
-        </div>
-        <div class="tab relative">
-          <input class="absolute opacity-0 -z-10" type="radio" name="accordion-2" id="rd4">
-          <label for="rd4" class="tab__label flex items-center text-[14px] lg:text-[16px] xl:text-[18px]">
-            <span class="flex justify-center items-center gap-2 lg:gap-3 xl:gap-4">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">Q</span>
-              予約は必要ですか？
-            </span>
-            <span
-              class="text-[14px] lg:text-[16px] xl:text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator !font-sans !font-medium">ー</span>
-              <span class="collapsed-indicator">+</span>
-            </span>
-          </label>
-          <div class="tab__content pl-5 pr-16 bg-white">
-            <p
-              class="!px-0 flex justify-start items-center gap-2 lg:gap-3 xl:gap-4 border-t text-[14px] lg:text-[16px] xl:text-[18px] border-black/50">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
-              予約は必要ですか？
-            </p>
-          </div>
-        </div>
-        <div class="tab relative">
-          <input class="absolute opacity-0 -z-10" type="radio" name="accordion-2" id="rd5">
-          <label for="rd5" class="tab__label flex items-center text-[14px] lg:text-[16px] xl:text-[18px]">
-            <span class="flex justify-center items-center gap-2 lg:gap-3 xl:gap-4">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">Q</span>
-              アメニティはなにがありますか？
-            </span>
-            <span
-              class="text-[14px] lg:text-[16px] xl:text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator !font-sans !font-medium">ー</span>
-              <span class="collapsed-indicator">+</span>
-            </span>
-          </label>
-          <div class="tab__content pl-5 pr-16 bg-white">
-            <p
-              class="!px-0 flex justify-start items-center gap-2 lg:gap-3 xl:gap-4 border-t text-[14px] lg:text-[16px] xl:text-[18px] border-black/50">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
-              アメニティはなにがありますか？
-            </p>
-          </div>
-        </div>
-        <div class="tab relative">
-          <input class="absolute opacity-0 -z-10" type="radio" name="accordion-2" id="rd6">
-          <label for="rd6" class="tab__label flex items-center text-[14px] lg:text-[16px] xl:text-[18px]">
-            <span class="flex justify-center items-center gap-2 lg:gap-3 xl:gap-4">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">Q</span>
-              男性でも受けられますか？
-            </span>
-            <span
-              class="text-[14px] lg:text-[16px] xl:text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator !font-sans !font-medium">ー</span>
-              <span class="collapsed-indicator">+</span>
-            </span>
-          </label>
-          <div class="tab__content pl-5 pr-16 bg-white">
-            <p
-              class="!px-0 flex justify-start items-center gap-2 lg:gap-3 xl:gap-4 border-t text-[14px] lg:text-[16px] xl:text-[18px] border-black/50">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
-              男性でも受けられますか？
-            </p>
-          </div>
-        </div>
-        <div class="tab relative">
-          <input class="absolute opacity-0 -z-10" type="radio" name="accordion-2" id="rd7">
-          <label for="rd7" class="tab__label flex items-center text-[14px] lg:text-[16px] xl:text-[18px]">
-            <span class="flex justify-center items-center gap-2 lg:gap-3 xl:gap-4">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">Q</span>
-              支払い方法は？
-            </span>
-            <span
-              class="text-[14px] lg:text-[16px] xl:text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator !font-sans !font-medium">ー</span>
-              <span class="collapsed-indicator">+</span>
-            </span>
-          </label>
-          <div class="tab__content pl-5 pr-16 bg-white">
-            <p
-              class="!px-0 flex justify-start items-center gap-2 lg:gap-3 xl:gap-4 border-t text-[14px] lg:text-[16px] xl:text-[18px] border-black/50">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
-              支払い方法は？
-            </p>
-          </div>
-        </div>
-        <div class="tab relative">
-          <input class="absolute opacity-0 -z-10" type="radio" name="accordion-2" id="rd8">
-          <label for="rd8" class="tab__label flex items-center text-[14px] lg:text-[16px] xl:text-[18px]">
-            <span class="flex justify-center items-center gap-2 lg:gap-3 xl:gap-4">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">Q</span>
-              個室ですか？
-            </span>
-            <span
-              class="text-[14px] lg:text-[16px] xl:text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator !font-sans !font-medium">ー</span>
-              <span class="collapsed-indicator">+</span>
-            </span>
-          </label>
-          <div class="tab__content pl-5 pr-16 bg-white">
-            <p
-              class="!px-0 flex justify-start items-center gap-2 lg:gap-3 xl:gap-4 border-t text-[14px] lg:text-[16px] xl:text-[18px] border-black/50">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
-              個室ですか？
-            </p>
-          </div>
-        </div>
-        <div class="tab relative">
-          <input class="absolute opacity-0 -z-10" type="radio" name="accordion-2" id="rd9">
-          <label for="rd9" class="tab__label flex items-center text-[14px] lg:text-[16px] xl:text-[18px]">
-            <span class="flex justify-center items-center gap-2 lg:gap-3 xl:gap-4">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">Q</span>
-              営業時間は何時から何時までですか？　受付は何時までですか？
-            </span>
-            <span
-              class="text-[14px] lg:text-[16px] xl:text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator !font-sans !font-medium">ー</span>
-              <span class="collapsed-indicator">+</span>
-            </span>
-          </label>
-          <div class="tab__content pl-5 pr-16 bg-white">
-            <p
-              class="!px-0 flex justify-start items-center gap-2 lg:gap-3 xl:gap-4 border-t text-[14px] lg:text-[16px] xl:text-[18px] border-black/50">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
-              営業時間は何時から何時までですか？　受付は何時までですか？
-            </p>
-          </div>
-        </div>
-        <div class="tab relative">
-          <input class="absolute opacity-0 -z-10" type="radio" name="accordion-2" id="rd10">
-          <label for="rd10" class="tab__label flex items-center text-[14px] lg:text-[16px] xl:text-[18px]">
-            <span class="flex justify-center items-center gap-2 lg:gap-3 xl:gap-4">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">Q</span>
-              駐車場のサービスはありますか？
-            </span>
-            <span
-              class="text-[14px] lg:text-[16px] xl:text-[20px] font-semibold absolute right-4 top-1/2 -translate-y-1/2">
-              <span class="expanded-indicator !font-sans !font-medium">ー</span>
-              <span class="collapsed-indicator">+</span>
-            </span>
-          </label>
-          <div class="tab__content pl-5 pr-16 bg-white">
-            <p
-              class="!px-0 flex justify-start items-center gap-2 lg:gap-3 xl:gap-4 border-t text-[14px] lg:text-[16px] xl:text-[18px] border-black/50">
-              <span class="blue-gradient-text text-[24px] lg:text-[30px] xl:text-[35px]">A</span>
-              駐車場のサービスはありますか？たちつてと
-            </p>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   </section>
-  <footer id="footerSection" class="relative bg-[#f9f6f3] w-full pt-20 pb-2 lg:pt-[150px] lg:pb-3">
+  <footer id="footerSection" class="relative w-full pt-20 pb-2 lg:pt-[150px] lg:pb-3">
     <div
       class="absolute top-0 left-0 w-full h-full bg-[url('assets/images/flow-footer-sp.webp')] lg:bg-[url('assets/images/flow-footer.webp')] bg-[length:100%_calc(100%+5px)] bg-no-repeat bg-center">
     </div>
@@ -701,20 +1064,20 @@
         </div>
         <div class="w-full lg:w-1/2 flex justify-end items-center">
           <div class="w-full lg:w-auto grid grid-cols-6 gap-x-8 gap-y-2 lg:gap-y-3 xl:gap-y-5">
-            <a href="#home" data-nav="home"
+            <a href="index.html#home" data-nav="home"
               class="text-[16px] col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">Home</a>
-            <a href="#concept" data-nav="concept"
+            <a href="index.html#concept" data-nav="concept"
               class="text-[16px] col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">Concept</a>
-            <a href="#room" data-nav="room"
+            <a href="index.html#room" data-nav="room"
               class="text-[16px] col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">Room</a>
-            <a href="#menu" data-nav="menu"
+            <a href="index.html#menu" data-nav="menu"
               class="text-[16px] col-span-3 lg:col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">Menu</a>
-            <a href="#item" data-nav="item"
+            <a href="index.html#item" data-nav="item"
               class="text-[16px] col-span-3 lg:col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">Items</a>
             <div class="hidden lg:block lg:col-span-2"></div>
-            <a href="#access" data-nav="access"
+            <a href="index.html#access" data-nav="access"
               class="text-[16px] col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">Access</a>
-            <a href="#qa" data-nav="qa"
+            <a href="index.html#qa" data-nav="qa"
               class="text-[16px] col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">F&Q</a>
             <div class="col-span-6 flex gap-6 justify-center lg:justify-start pt-6">
               <a href="https://www.instagram.com/nspa_official/" target="_blank"
@@ -736,47 +1099,6 @@
       </div>
     </div>
   </footer>
-  <section class="w-full pt-6">
-    <div class="grid grid-cols-3 bg-[#FFFDEA]">
-      <div class="lg:py-2 group blue-gradient-hover">
-        <button
-          class="w-full flex items-center justify-center text-[16px] xl:text-[18px] py-4 gap-2 lg:gap-4 xl:gap-6 text-[#0c2340] text-start pl-5 pr-1 group-hover:text-white">
-          <span class="flex-1 lg:flex-none">Oneline Reserve</span>
-          <svg class="w-[20px] lg:w-[22px] h-[22px] text-gray-500 group-hover:text-white duration-200 mt-1"
-            viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <circle cx="11" cy="11" r="10.5" stroke="currentColor" stroke-width="1"></circle>
-            <polyline points="6 11 16 11 10 7" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"
-              stroke-linejoin="round"></polyline>
-          </svg>
-        </button>
-      </div>
-      <div class="lg:py-2 group blue-gradient-hover">
-        <button
-          class="w-full flex items-center justify-center text-[16px] xl:text-[18px] py-4 gap-2 lg:gap-4 xl:gap-6 text-[#0c2340] text-start pl-7 pr-1 group-hover:text-white lg:border-x border-black/30">
-          <span class="flex-1 lg:flex-none">LINE Reserve</span>
-          <svg class="w-[20px] lg:w-[22px] h-[22px] text-gray-500 group-hover:text-white duration-200 mt-1"
-            viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <circle cx="11" cy="11" r="10.5" stroke="currentColor" stroke-width="1"></circle>
-            <polyline points="6 11 16 11 10 7" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"
-              stroke-linejoin="round"></polyline>
-          </svg>
-        </button>
-      </div>
-      <div class="lg:py-2 group blue-gradient-hover">
-        <button
-          class="w-full flex items-center justify-center text-[16px] xl:text-[18px] py-4 gap-2 lg:gap-4 xl:gap-6 text-[#0c2340] text-start pl-5 pr-1 group-hover:text-white">
-          <span class="flex-1 lg:flex-none">Hot<span class="hidden lg:inline"> &nbsp;</span>Pepper Reserve</span>
-          <svg class="w-[20px] lg:w-[22px] h-[22px] text-gray-500 group-hover:text-white duration-200 mt-1"
-            viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <circle cx="11" cy="11" r="10.5" stroke="currentColor" stroke-width="1"></circle>
-            <polyline points="6 11 16 11 10 7" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"
-              stroke-linejoin="round"></polyline>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-  </section>
   <div id="menu_modal"
     class="w-full fixed inset-0 z-40 flex bg-[url('assets/images/bg-default.webp')] bg-cover bg-center transition-all duration-700 ease-in-out pointer-events-none opacity-0 py-2 px-3">
     <div class="relative w-full h-full flex flex-col overflow-auto border border-black">
@@ -801,31 +1123,31 @@
         </div>
         <nav class="w-full flex flex-col gap-[2px] px-10">
           <div class="w-full grid grid-cols-2 gap-y-10 gap-x-10 justify-between">
-            <a href="#home" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium">
+            <a href="index.html#home" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium">
               Home<br>
               <span class="text-[14px]">あいうえお</span>
             </a>
-            <a href="#concept" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium pl-3">
+            <a href="index.html#concept" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium pl-3">
               Concept<br>
               <span class="text-[14px]">あいうえお</span>
             </a>
-            <a href="#room" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium">
+            <a href="index.html#room" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium">
               Room<br>
               <span class="text-[14px]">あいうえお</span>
             </a>
-            <a href="#menu" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium pl-3">
+            <a href="index.html#menu" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium pl-3">
               Menu<br>
               <span class="text-[14px]">あいうえお</span>
             </a>
-            <a href="#item" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium">
+            <a href="index.html#item" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium">
               Item<br>
               <span class="text-[14px]">あいうえお</span>
             </a>
-            <a href="#access" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium pl-3">
+            <a href="index.html#access" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium pl-3">
               Access<br>
               <span class="text-[14px]">あいうえお</span>
             </a>
-            <a href="#qa" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium">
+            <a href="index.html#qa" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium">
               Q&A<br>
               <span class="text-[14px]">あいうえお</span>
             </a>
@@ -847,22 +1169,6 @@
     </div>
   </div>
   <script src="assets/js/main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
-  <script>
-    $(".fv-top-ripples").ripples({
-      resolution: 256,
-      dropRadius: 20,
-      perturbance: 0.01,
-    });
-    $(".fv-top-ripples").on("click", function (e) {
-      var $el = $(this);
-      var rect = this.getBoundingClientRect();
-      var x = e.clientX - rect.left;
-      var y = e.clientY - rect.top;
-      $el.ripples("drop", x, y, 20, 0.04);
-    });
-  </script>
 </body>
 
 </html>
