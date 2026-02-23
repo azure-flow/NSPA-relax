@@ -42,6 +42,15 @@ body {
   overflow-y: auto;
 }
 
+/* Loading screen: visible on load, then fades out after 2s */
+#loading-screen {
+  transition: opacity 0.5s ease-out;
+}
+#loading-screen.loaded {
+  opacity: 0;
+  pointer-events: none;
+}
+
 *,
 body {
   font-family: "Zen Old Mincho", serif;

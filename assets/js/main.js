@@ -1,3 +1,23 @@
+// Loading screen: show 2s after page load, then fade out smoothly
+(function () {
+  var loadingEl = document.getElementById("loading-screen");
+  if (!loadingEl) return;
+  function hideLoading() {
+    loadingEl.classList.add("loaded");
+    loadingEl.addEventListener("transitionend", function once() {
+      loadingEl.removeEventListener("transitionend", once);
+      loadingEl.style.display = "none";
+    });
+  }
+  if (document.readyState === "complete") {
+    setTimeout(hideLoading, 2000);
+  } else {
+    window.addEventListener("load", function () {
+      setTimeout(hideLoading, 2000);
+    });
+  }
+})();
+
 document.addEventListener("DOMContentLoaded", function () {
 
   // AOS

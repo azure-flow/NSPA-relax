@@ -123,33 +123,34 @@
   <section id="room" class="w-full relative pt-16 md:pt-10 lg:pt-28 xl:pt-0 pb-20 w-full text-center">
     <div id="private-room" class="w-full flex flex-col gap-24 lg:gap-20 xl:gap-24">
       <div>
-        <nav class="w-full flex flex-col lg:flex-row justify-center items-center gap-2 md:gap-4 lg:gap-6 xl:gap-8 xl:py-4">
+        <nav
+          class="w-full flex flex-col lg:flex-row justify-center items-center gap-2 md:gap-4 lg:gap-6 xl:gap-8 xl:py-4">
           <ul
             class="w-full lg:w-auto flex flex-row items-center gap-7 md:gap-4 lg:gap-6 xl:gap-8 text-[15px] lg:text-[16px] xl:text-[20px] font-bodoni font-regular tracking-wide text-[#2e2f34]">
             <li class="w-1/2">
-              <a href="#private-room" class="w-full block text-end text-nowrap hover:underline">PRIVATE ROOM</a>
+              <a href="#private-room" class="w-full block text-end text-nowrap font-bodoni tracking-wider lg:tracking-wider tracking-[3px] hover:underline">PRIVATE ROOM</a>
             </li>
             <li class="mx-1 lg:mx-3 xl:mx-6">|</li>
             <li class="w-1/2">
-              <a href="#pair-room" class="w-full block text-start text-nowrap hover:underline">PAIR ROOM</a>
+              <a href="#pair-room" class="w-full block text-start text-nowrap font-bodoni tracking-wider lg:tracking-wider tracking-[3px] hover:underline">PAIR ROOM</a>
             </li>
             <li class="mx-1 lg:mx-3 xl:mx-6 hidden lg:block">|</li>
           </ul>
           <ul
             class="w-full lg:w-auto flex flex-row items-center gap-7 md:gap-4 lg:gap-6 xl:gap-8 text-[15px] lg:text-[16px] xl:text-[20px] font-bodoni font-regular tracking-wide text-[#2e2f34]">
             <li class="w-1/2">
-              <a href="#powder-space" class="w-full block text-end text-nowrap hover:underline">POWDER SPACE</a>
+              <a href="#powder-space" class="w-full block text-end text-nowrap font-bodoni tracking-wider lg:tracking-wider tracking-[3px] hover:underline">POWDER SPACE</a>
             </li>
             <li class="mx-1 lg:mx-3 xl:mx-6">|</li>
             <li class="w-1/2">
-              <a href="#shower-room" class="w-full block text-start text-nowrap hover:underline">SHOWER ROOM</a>
+              <a href="#shower-room" class="w-full block text-start text-nowrap font-bodoni tracking-wider lg:tracking-wider tracking-[3px] hover:underline">SHOWER ROOM</a>
             </li>
           </ul>
         </nav>
       </div>
       <div class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-[100px]">
         <h2
-          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-wide mb-4 lg:mb-5 xl:mb-6">
+          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-[2px] lg:tracking-wider xl:tracking-widest mb-4 lg:mb-5 xl:mb-6">
           PRIVATE ROOM
         </h2>
         <p
@@ -167,7 +168,7 @@
       </div>
       <div id="pair-room" class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-[100px]">
         <h2
-          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-wide mb-6">
+          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-[2px] lg:tracking-wider xl:tracking-widest mb-6">
           PAIR ROOM
         </h2>
         <p
@@ -185,7 +186,7 @@
       </div>
       <div id="powder-space" class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-[100px]">
         <h2
-          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-wide mb-6">
+          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-[2px] lg:tracking-wider xl:tracking-widest mb-6">
           POWDER SPACE
         </h2>
         <p
@@ -203,7 +204,7 @@
       </div>
       <div id="shower-room" class="w-full flex flex-col md:mb-4 lg:mb-6 xl:mb-[100px]">
         <h2
-          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-wide mb-6">
+          class="text-center text-[24px] md:text-[28px] lg:text-[30px] xl:text-[50px] font-bodoni font-regular text-[#193759] tracking-[2px] lg:tracking-wider xl:tracking-widest mb-6">
           SHOWER ROOM
         </h2>
         <p
@@ -215,7 +216,8 @@
             <img src="assets/images/shower-room01.webp" alt="shower-room01" class="w-full h-[stretch]">
           </div>
           <div>
-            <img src="assets/images/shower-room02.webp" alt="shower-room02" class="max-w-[150%] lg:max-w-[100%] w-[150%] lg:w-full h-auto">
+            <img src="assets/images/shower-room02.webp" alt="shower-room02"
+              class="max-w-[150%] lg:max-w-[100%] w-[150%] lg:w-full h-auto">
           </div>
         </div>
       </div>
@@ -335,6 +337,14 @@
             </a>
           </div>
         </nav>
+      </div>
+    </div>
+  </div>
+  <div id="loading-screen" class="w-full h-full fixed inset-0 z-50 bg-white flex items-center justify-center">
+    <div
+      class="w-full h-full flex items-center justify-center bg-[url('assets/images/bg-loading.webp')] bg-cover bg-center">
+      <div class="w-full h-full flex items-center justify-center">
+        <img src="assets/images/logo-loading.webp" alt="loading" class="w-[200px] h-auto">
       </div>
     </div>
   </div>
