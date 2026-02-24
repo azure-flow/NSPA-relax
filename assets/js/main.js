@@ -200,6 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // -------------------------  CTA Reserve Bar (Book Now)  ----------------
+  const headerBookNowBtn = document.getElementById("header-book-now-btn");
   const bookNowBtn = document.getElementById("book-now-btn");
   const ctaBar = document.getElementById("cta-reserve-bar");
   let ctaVisible = false;
@@ -217,8 +218,11 @@ document.addEventListener("DOMContentLoaded", function () {
     ctaVisible = false;
   }
 
-  if (bookNowBtn && ctaBar) {
+  if (headerBookNowBtn && bookNowBtn && ctaBar) {
     bookNowBtn.addEventListener("click", function () {
+      showCtaBar();
+    });
+    headerBookNowBtn.addEventListener("click", function () {
       showCtaBar();
     });
 

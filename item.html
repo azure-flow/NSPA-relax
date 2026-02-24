@@ -52,7 +52,7 @@
         </a>
       </div>
       <nav id="mobileNav"
-        class="w-full lg:w-auto flex flex-row justify-end md:justify-start lg:items-center gap-5 lg:gap-6 xl:gap-[72px] overflow-hidden">
+        class="w-full lg:w-auto flex flex-row justify-end lg:items-center gap-5 lg:gap-6 xl:gap-[72px] overflow-hidden">
         <a href="index.html#home" data-nav="home"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">
           Home
@@ -86,7 +86,7 @@
             class="cursor-pointer lg:hover:text-[#227093]">En</span>
         </span>
         <div class="items-center gap-4 xl:gap-6">
-          <button
+          <button id="header-book-now-btn"
             class="hidden lg:flex gap-2 lg:gap-4 items-center justify-center md:px-12 lg:px-8 py-6 text-[16px] lg:text-[18px] xl:text-[21px] bg-gradient-to-r from-[#89b8e7] to-[#2881c8] hover:bg-white text-white hover:text-[#193759e5] transition">
             Book now
             <svg width="22px" height="22px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -259,7 +259,7 @@
               class="text-[16px] col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">Concept</a>
             <a href="index.html#room" data-nav="room"
               class="text-[16px] col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">Room</a>
-            <a href="index.html#menu" data-nav="menu"
+            <a href="menu.html" data-nav="menu"
               class="text-[16px] col-span-3 lg:col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">Menu</a>
             <a href="index.html#item" data-nav="item"
               class="text-[16px] col-span-3 lg:col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">Items</a>
@@ -269,7 +269,7 @@
             <a href="index.html#qa" data-nav="qa"
               class="text-[16px] col-span-2 xl:text-[18px] text-white hover:text-gray-300 transition text-center lg:text-start leading-[1.7] tracking-wide">F&Q</a>
             <div class="col-span-6 flex gap-6 justify-center lg:justify-start pt-6">
-              <a href="https://www.instagram.com/nspa_official/" target="_blank"
+              <a href="https://www.instagram.com/hawaiianresort_nspa/?hl=ja" target="_blank"
                 class="text-[16px] xl:text-[18px] text-white hover:text-gray-300 transition leading-[1.7] tracking-wide">
                 <span class="fab fa-instagram text-white hover:text-gray-300 transition text-[20px]"></span>
               </a>
@@ -340,7 +340,7 @@
     </div>
   </section>
   <div id="menu_modal"
-    class="w-full fixed inset-0 z-40 flex bg-[url('assets/images/bg-default.webp')] bg-cover bg-center transition-all duration-700 ease-in-out pointer-events-none opacity-0 py-2 px-3">
+    class="w-full fixed inset-0 z-50 flex bg-[url('assets/images/bg-default.webp')] bg-cover bg-center transition-all duration-700 ease-in-out pointer-events-none opacity-0 py-2 px-3">
     <div class="relative w-full h-full flex flex-col overflow-auto border border-black">
       <div class="w-full flex flex-col items-center gap-20">
         <div class="w-full flex justify-between items-center px-6 pt-4">
@@ -361,8 +361,8 @@
             </div>
           </div>
         </div>
-        <nav class="w-full flex flex-col gap-[2px] px-10">
-          <div class="w-full grid grid-cols-2 gap-y-10 gap-x-10 justify-between">
+        <nav class="w-full flex flex-col items-center gap-[2px] px-10">
+          <div class="max-w-[280px] w-full grid grid-cols-2 gap-y-10 gap-x-10 justify-between">
             <a href="index.html#home" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium">
               Home<br>
               <span class="text-[14px]">あいうえお</span>
@@ -375,7 +375,7 @@
               Room<br>
               <span class="text-[14px]">あいうえお</span>
             </a>
-            <a href="index.html#menu" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium pl-3">
+            <a href="menu.html" class="text-[#6a3906] text-[28px] text-start leading-[0.8] font-medium pl-3">
               Menu<br>
               <span class="text-[14px]">あいうえお</span>
             </a>
