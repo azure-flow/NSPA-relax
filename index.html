@@ -39,45 +39,45 @@
 
       <nav id="mobileNav"
         class="w-full lg:w-auto flex flex-row justify-end md:justify-start lg:items-center gap-5 lg:gap-6 xl:gap-[72px] overflow-hidden">
-        <a href="#home" data-nav="home"
+        <a href="index.html#home" data-nav="home"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">
           Home
           <img src="assets/images/active-line.webp" alt=""
             class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
             aria-hidden="true">
         </a>
-        <a href="#concept" data-nav="concept"
+        <a href="index.html#concept" data-nav="concept"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">
           Concept
           <img src="assets/images/active-line.webp" alt=""
             class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
             aria-hidden="true">
         </a>
-        <a href="#room" data-nav="room"
+        <a href="room.html" data-nav="room"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Room
           <img src="assets/images/active-line.webp" alt=""
             class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
             aria-hidden="true">
         </a>
-        <a href="#menu" data-nav="menu"
+        <a href="menu.html" data-nav="menu"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Menu
           <img src="assets/images/active-line.webp" alt=""
             class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
             aria-hidden="true">
         </a>
-        <a href="#item" data-nav="item"
+        <a href="item.html" data-nav="item"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Item
           <img src="assets/images/active-line.webp" alt=""
             class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
             aria-hidden="true">
         </a>
-        <a href="#access" data-nav="access"
+        <a href="index.html#access" data-nav="access"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Access
           <img src="assets/images/active-line.webp" alt=""
             class="w-[20px] lg:w-[45px] nav-active-line absolute -bottom-2 left-1/2 -translate-x-1/2 h-auto opacity-0 transition-opacity duration-200"
             aria-hidden="true">
         </a>
-        <a href="#qa" data-nav="qa"
+        <a href="index.html#qa" data-nav="qa"
           class="nav-link relative hidden lg:flex text-start lg:text-center text-[16px] lg:text-[16px] xl:text-[18px] text-[#2e2f34] lg:hover:text-[#227093] transition pl-8 lg:pl-0 lg:pr-0 py-3 lg:py-0 mt-2 lg:mt-0">Q
           &amp; A
           <img src="assets/images/active-line.webp" alt=""
@@ -134,7 +134,7 @@
             <div class="slide-inner"></div>
           </div>
           <div
-            class="z-20 swiper-slide fv-top-ripples w-full h-full bg-[url('assets/images/fv-top02.jpg')] bg-cover bg-center">
+            class="z-20 swiper-slide fv-top-ripples w-full h-full bg-[url('assets/images/fv-top02.webp')] bg-cover bg-center">
             <div class="slide-inner"></div>
           </div>
           <div
@@ -740,7 +740,11 @@
       </div>
     </div>
   </footer>
-  <section class="w-full pt-6">
+  <button id="book-now-btn"
+    class="fixed bottom-4 lg:bottom-6 xl:bottom-10 right-4 lg:right-6 xl:right-10 z-50 aspect-square rounded-full blue-gradient text-white flex flex-col items-center justify-center gap-4 text-[24px] leading-[1] tracking-wide transition-shadow duration-300 hover:shadow-xl">
+    <img src="assets/images/book-now0.png" alt="Book Now" class="w-[70px] md:w-[100px] lg:w-[120px] xl:w-[130px] h-auto">
+  </button>
+  <section id="cta-reserve-bar" class="w-full fixed bottom-0 left-0 right-0 z-50">
     <div class="grid grid-cols-3 bg-[#FFFDEA]">
       <div class="lg:py-2 group blue-gradient-hover">
         <a href="https://reservia.jp/reserve/menu/b77abac6c9?start_page=2&is_guest=1" target="_blank">
@@ -785,7 +789,6 @@
         </a>
       </div>
     </div>
-
   </section>
   <div id="menu_modal"
     class="w-full fixed inset-0 z-40 flex bg-[url('assets/images/bg-default.webp')] bg-cover bg-center transition-all duration-700 ease-in-out pointer-events-none opacity-0 py-2 px-3">
@@ -857,10 +860,13 @@
     </div>
   </div>
   <div id="loading-screen" class="w-full h-full fixed inset-0 z-50 bg-white flex items-center justify-center">
-    <div
-      class="w-full h-full flex items-center justify-center bg-[url('assets/images/bg-loading.webp')] bg-cover bg-center">
-      <div class="w-full h-full flex items-center justify-center">
-        <img src="assets/images/logo-loading.webp" alt="loading" class="w-[200px] h-auto">
+    <div class="w-full h-full flex items-center justify-center">
+      <div class="w-full h-full relative flex items-center justify-center">
+        <video autoplay muted loop playsinline preload="metadata" class="w-full h-full object-cover">
+          <source src="assets/videos/sea.mp4" type="video/mp4">
+        </video>
+        <img src="assets/images/logo-loading.webp" alt="loading"
+          class="w-[200px] h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       </div>
     </div>
   </div>

@@ -10,10 +10,10 @@
     });
   }
   if (document.readyState === "complete") {
-    setTimeout(hideLoading, 2000);
+    setTimeout(hideLoading, 4000);
   } else {
     window.addEventListener("load", function () {
-      setTimeout(hideLoading, 2000);
+      setTimeout(hideLoading, 4000);
     });
   }
 })();
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   topFvSwiper = new Swiper(".swiper-fv-top", {
     centeredSlides: true,
     loop: true,
-    speed: 1000,
+    speed: 2000,
     slidesPerView: 1,
     effect: "fade",
     autoplay: {
@@ -198,4 +198,44 @@ document.addEventListener("DOMContentLoaded", function () {
     const el = document.getElementById(id);
     if (el) observer.observe(el);
   });
+
+  // -------------------------  CTA Reserve Bar (Book Now)  ----------------
+  const bookNowBtn = document.getElementById("book-now-btn");
+  const ctaBar = document.getElementById("cta-reserve-bar");
+  let ctaVisible = false;
+  let lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+
+  function showCtaBar() {
+    if (!ctaBar || ctaVisible) return;
+    ctaBar.classList.add("cta-visible");
+    ctaVisible = true;
+  }
+
+  function hideCtaBar() {
+    if (!ctaBar || !ctaVisible) return;
+    ctaBar.classList.remove("cta-visible");
+    ctaVisible = false;
+  }
+
+  if (bookNowBtn && ctaBar) {
+    bookNowBtn.addEventListener("click", function () {
+      showCtaBar();
+    });
+
+    window.addEventListener("scroll", function () {
+      const currentY = window.pageYOffset || document.documentElement.scrollTop || 0;
+
+      if (!ctaVisible) {
+        lastScrollY = currentY;
+        return;
+      }
+
+      // Keep CTA bar visible while scrolling down; hide once user scrolls up
+      if (currentY < lastScrollY - 2) {
+        hideCtaBar();
+      }
+
+      lastScrollY = currentY;
+    });
+  }
 });

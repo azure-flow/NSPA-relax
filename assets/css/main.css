@@ -51,6 +51,19 @@ body {
   pointer-events: none;
 }
 
+/* Fixed bottom CTA bar (index page): hidden by default, slides up when activated */
+#cta-reserve-bar {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+#cta-reserve-bar.cta-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 *,
 body {
   font-family: "Zen Old Mincho", serif;
