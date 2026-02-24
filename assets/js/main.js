@@ -10,10 +10,10 @@
     });
   }
   if (document.readyState === "complete") {
-    setTimeout(hideLoading, 4000);
+    setTimeout(hideLoading, 1000);
   } else {
     window.addEventListener("load", function () {
-      setTimeout(hideLoading, 4000);
+      setTimeout(hideLoading, 1000);
     });
   }
 })();
